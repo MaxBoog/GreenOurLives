@@ -50,7 +50,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
 			<div class="container">
-				<a class="navbar-brand" href="/">Green Our Lives</a>
+				<a class="navbar-brand" href="index.php">Green Our Lives</a>
 
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
 					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -89,10 +89,9 @@
 	</header>
 	<section class="container-fluid">
 		<div class="row">
-			<h1 class="header-text mx-auto">Green Our Lives</h1>
+			<h1 class="header-text mx-auto">Over Ons & Het Project</h1>
 			<div class="col-sm-12 text-center">
-				<p class="header-subtext">Bekijk hoe jij bij kan dragen aan een groenere toekomst!</p>
-				<a href="test.php" class="btn btn-CTA-1">Doe de test!</a>
+				<p class="header-subtext">Lees hier meer over wie wij zijn en wat wij doen.</p>
 			</div>
 		</div>
 	</section>

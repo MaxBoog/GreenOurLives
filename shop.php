@@ -50,7 +50,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
 			<div class="container">
-				<a class="navbar-brand" href="/">Green Our Lives</a>
+				<a class="navbar-brand" href="index.php">Green Our Lives</a>
 
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
 					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
@@ -92,6 +92,7 @@
 			<h1 class="header-text mx-auto">Beloningen</h1>
 			<div class="col-sm-12 text-center">
 				<p class="header-subtext">Bekijk hier wat je kan kopen met je gespaarde punten.</p>
+				<p class="pb-5">Je hebt op dit moment 34 munten!</p>
 			</div>
 		</div>
 	</section>
@@ -102,39 +103,39 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card">
-					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<img src="https://via.placeholder.com/150x100/8aae92/FFFFFF/" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Lorem, ipsum.</h5>
 						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
 					</div>
 					<div class="card-body">
-						<a href="#" class="card-link">Buy</a>
+						<a href="#" class="card-link">20 munten</a>
 						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 			<div class="card">
-					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<img src="https://via.placeholder.com/150x100/8aae92/FFFFFF/" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Lorem, ipsum.</h5>
 						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
 					</div>
 					<div class="card-body">
-						<a href="#" class="card-link">Buy</a>
+						<a href="#" class="card-link">20 munten</a>
 						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 			<div class="card">
-					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<img src="https://via.placeholder.com/150x100/8aae92/FFFFFF/" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Lorem, ipsum.</h5>
 						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
 					</div>
 					<div class="card-body">
-						<a href="#" class="card-link">Buy</a>
+						<a href="#" class="card-link">20 munten</a>
 						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
 					</div>
 				</div>
@@ -143,39 +144,39 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card">
-					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<img src="https://via.placeholder.com/150x100/8aae92/FFFFFF/" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Lorem, ipsum.</h5>
 						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
 					</div>
 					<div class="card-body">
-						<a href="#" class="card-link">Buy</a>
+						<a href="#" class="card-link">20 munten</a>
 						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 			<div class="card">
-					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<img src="https://via.placeholder.com/150x100/8aae92/FFFFFF/" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Lorem, ipsum.</h5>
 						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
 					</div>
 					<div class="card-body">
-						<a href="#" class="card-link">Buy</a>
+						<a href="#" class="card-link">20 munten</a>
 						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 			<div class="card">
-					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<img src="https://via.placeholder.com/150x100/8aae92/FFFFFF/" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Lorem, ipsum.</h5>
 						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
 					</div>
 					<div class="card-body">
-						<a href="#" class="card-link">Buy</a>
+						<a href="#" class="card-link">20 munten</a>
 						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
 					</div>
 				</div>
@@ -184,39 +185,39 @@
 		<div class="row">
 			<div class="col-md-4">
 				<div class="card">
-					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<img src="https://via.placeholder.com/150x100/8aae92/FFFFFF/" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Lorem, ipsum.</h5>
 						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
 					</div>
 					<div class="card-body">
-						<a href="#" class="card-link">Buy</a>
+						<a href="#" class="card-link">20 munten</a>
 						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 			<div class="card">
-					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<img src="https://via.placeholder.com/150x100/8aae92/FFFFFF/" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Lorem, ipsum.</h5>
 						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
 					</div>
 					<div class="card-body">
-						<a href="#" class="card-link">Buy</a>
+						<a href="#" class="card-link">20 munten</a>
 						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
 					</div>
 				</div>
 			</div>
 			<div class="col-md-4">
 			<div class="card">
-					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<img src="https://via.placeholder.com/150x100/8aae92/FFFFFF/" class="card-img-top" alt="...">
 					<div class="card-body">
 						<h5 class="card-title">Lorem, ipsum.</h5>
 						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
 					</div>
 					<div class="card-body">
-						<a href="#" class="card-link">Buy</a>
+						<a href="#" class="card-link">20 munten</a>
 						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
 					</div>
 				</div>

@@ -210,15 +210,15 @@ a {
 .card {
   margin-bottom: 5rem; }
   .card .card-link {
-    color: #616161;
-    border: 2px solid #616161;
+    color: #8aae92;
+    border: 2px solid #8aae92;
     padding: 1rem;
     border-radius: 7px;
     -webkit-transition: 0.1s;
     -o-transition: 0.1s;
     transition: 0.1s; }
     .card .card-link:hover {
-      background-color: #616161;
+      background-color: #8aae92;
       color: #fbfbfb; }
 
 input[type="text"], input[type="email"], input[type="tel"], textarea {

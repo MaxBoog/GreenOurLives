@@ -50,7 +50,7 @@
 	<header>
 		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
 			<div class="container">
-				<a class="navbar-brand" href="/">Green Our Lives</a>
+				<a class="navbar-brand" href="index.php">Green Our Lives</a>
 
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
 					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
