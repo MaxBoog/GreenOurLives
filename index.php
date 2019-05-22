@@ -83,85 +83,15 @@
 	</header>
 	<section class="container-fluid">
 		<div class="row">
-			<h1 class="header-text mx-auto">Save The Earth</h1>
+			<h1 class="header-text mx-auto">Green Our Lives</h1>
 			<div class="col-sm-12 text-center">
 				<p class="header-subtext">Bekijk hoe jij bij kan dragen aan een groenere toekomst!</p>
-				<a href="test.php" class="btn">Doe de test!</a>
+				<a href="test.php" class="btn btn-CTA-1">Doe de test!</a>
 			</div>
 		</div>
 	</section>
 
 	<main role="main">
-		<div class="container-fluid marketing">
-			<div class="row">
-				<div class="col-sm-6"></div>
-				<div class="col-sm-6"></div>
-			</div>
-
-			<hr />
-
-			<div class="row featurette">
-				<div class="col-md-7">
-					<h2>Book Now!</h2>
-					<p>
-						Book one of our tours now! Our bookings are handled via
-						<a href="https://www.planyo.com/">Planyo.com</a>. More information
-						about Planyo can be found on their website.
-					</p>
-					<p class="text-center">
-						<a href="#" class="btn btn-lg btn-CTA-1">Make a Booking!</a>
-					</p>
-				</div>
-				<div class="col-md-5">
-					<img class="img-fluid" src="assets/img/images/colombia.jpg" alt="Carlito's Adventures" />
-				</div>
-			</div>
-
-			<hr />
-
-			<div class="row featurette">
-				<div class="col-md-7 order-md-2">
-					<h2>
-						Second header
-						<span class="text-muted">Potential second subheader</span>
-					</h2>
-					<p>
-						(room for about 40 words) Lorem ipsum dolor sit amet consectetur
-						adipisicing elit. Repellat fuga perferendis velit blanditiis
-						distinctio. Esse doloremque, quae neque ea ipsam a quisquam ex aut
-						recusandae culpa perspiciatis necessitatibus beatae debitis fuga,
-						soluta facilis labore aspernatur error reiciendis. Voluptates,
-						soluta atque?
-					</p>
-				</div>
-				<div class="col-md-5 order-md-1">
-					<img class="img-fluid" src="assets/img/images/colombia2.jpg" alt="Carlito's Adventures" />
-				</div>
-			</div>
-
-			<hr />
-
-			<div class="row featurette">
-				<div class="col-md-7">
-					<h2>
-						Third header
-						<span class="text-muted">Potential third subheader</span>
-					</h2>
-					<p>
-						(room for about 40 words) Lorem ipsum dolor sit amet consectetur
-						adipisicing elit. Repellat fuga perferendis velit blanditiis
-						distinctio. Esse doloremque, quae neque ea ipsam a quisquam ex aut
-						recusandae culpa perspiciatis necessitatibus beatae debitis fuga,
-						soluta facilis labore aspernatur error reiciendis. Voluptates,
-						soluta atque?
-					</p>
-				</div>
-				<div class="col-md-5">
-					<img class="img-fluid" src="assets/img/images/compass.jpg" alt="Carlito's Adventures" />
-				</div>
-			</div>
-		</div>
-
 		<!-- footer -->
 
 		<footer class="container">
@@ -175,16 +105,16 @@
 				<div class="col-md-6 text-center text-md-left">
 					<hr />
 					<p>
-						<a href="index.php">All our Tours</a>
+						<a href="index.php">home</a>
 					</p>
 					<p>
-						<a href="test.php">Activities</a>
+						<a href="test.php">doe de test!</a>
 					</p>
 					<p>
-						<a href="about.php">Services & Accomodations</a>
+						<a href="about.php">over ons & het project</a>
 					</p>
 					<p>
-						<a href="shop.php">Contact</a>
+						<a href="shop.php">beloningen</a>
 					</p>
 				</div>
 				<div class="col-md-6 text-center text-md-left">
