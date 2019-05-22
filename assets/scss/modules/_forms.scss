@@ -1,0 +1,43 @@
+input[type="text"] {
+	border: none !important;
+	border-radius: 0 !important;
+	padding: 1.5rem !important;
+	font-size: $f-normal !important;
+	transition: 0.5s ease;
+	outline: none;
+	box-shadow: none !important;
+	color: $black;
+	border-bottom: 2px solid $grey !important;
+	&:focus {
+		border-bottom: 2px solid $red !important;
+		outline-color: transparent !important;
+	}
+}
+
+input[type="email"] {
+	@extend input[type="text"];
+}
+
+input[type="tel"] {
+	@extend input[type="text"];
+}
+
+input::placeholder {
+	color: $black !important;
+}
+
+textarea {
+	@extend input[type="text"];
+	border: 2px solid $grey !important;
+	&:focus {
+		border: 2px solid $red !important;
+	}
+}
+
+.form-group {
+	margin: 2rem 0 !important;
+}
+
+.help-block {
+	color: $red;
+}

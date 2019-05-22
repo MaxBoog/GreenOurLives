@@ -1,0 +1,15 @@
+footer {
+	height: 100%;
+	margin-top: 2.5rem;
+	padding: 3rem;
+	color: $black;
+	hr {
+		border-color: $black;
+	}
+	a {
+		color: $black;
+		&:hover {
+			color: $red;
+		}
+	}
+}

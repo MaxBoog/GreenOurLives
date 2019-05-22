@@ -1,0 +1,155 @@
+// global button styles
+
+.btn {
+	font-size: $f-normal;
+	border: none;
+	&:link {
+		border: none;
+	}
+	&:visited {
+		border: none;
+	}
+	&:hover {
+		border: none;
+	}
+	&:active {
+		border: none;
+	}
+}
+
+// primary Call to Action button
+
+.btn-CTA-1 {
+	background-color: $white;
+	border-radius: 7px;
+	border: 5px solid $red !important;
+	padding: 3rem 5rem;
+	margin: 2rem 0;
+	color: $red;
+	font-weight: 900 !important;
+	&:hover {
+		background-color: $red;
+		border: 4px solid $red;
+		color: white;
+	}
+	&:active {
+		box-shadow: none !important;
+		color: white !important;
+		background-color: $red !important;
+		border-color: $red !important;
+		outline: none !important;
+	}
+	&:focus {
+		color: white !important;
+		background-color: $red !important;
+		border-color: $red !important;
+		box-shadow: none !important;
+	}
+}
+
+// form send button
+
+.btn-send {
+	@extend .btn-CTA-1;
+	cursor: pointer;
+}
+
+// secondary Call to Action button
+
+.btn-CTA-2 {
+	background-color: $white;
+	border: 5px solid $blue !important;
+	transition: 0.3s;
+	font-size: $f-normal;
+	&:hover {
+		color: $white;
+		background-color: $blue;
+		border: 5px solid $blue;
+	}
+	&:active {
+		box-shadow: none !important;
+		color: $white !important;
+		background-color: $blue !important;
+		border-color: $blue !important;
+		outline: none !important;
+	}
+	&:focus {
+		color: $white !important;
+		background-color: $blue !important;
+		border-color: $blue !important;
+		box-shadow: none !important;
+	}
+}
+
+// scroll to top button
+
+.scrollToTop {
+	position: fixed;
+	bottom: 3rem;
+	right: 3rem;
+	z-index: 99;
+	border: none;
+	outline: none;
+	color: $red;
+	cursor: pointer;
+	padding: 1rem;
+	border-radius: 5px;
+	display: none;
+}
+
+// spinners
+
+.spinner-1:before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 6rem;
+	width: 6rem;
+	margin-top: -3rem;
+	margin-left: -3rem;
+	border-radius: 50%;
+	border: 3px solid $grey;
+	border-top-color: $red;
+	animation: spinner 0.7s ease infinite;
+}
+
+.spinner-2:before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 6rem;
+	width: 6rem;
+	margin-top: -3rem;
+	margin-left: -3rem;
+	border-radius: 50%;
+	border: 3px solid transparent;
+	border-top-color: $red;
+	border-bottom-color: $red;
+	animation: spinner 0.7s linear infinite;
+}
+
+.spinner-3:before {
+	content: "";
+	box-sizing: border-box;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 6rem;
+	width: 6rem;
+	margin-top: -3rem;
+	margin-left: -3rem;
+	border-radius: 50%;
+	border-top: 3px solid $red;
+	border-right: 3px solid transparent;
+	animation: spinner 0.7s linear infinite;
+}
+
+@keyframes spinner {
+	to {
+		transform: rotate(360deg);
+	}
+}

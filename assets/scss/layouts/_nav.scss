@@ -1,0 +1,121 @@
+
+
+// main navigation
+
+.navbar-custom {
+	background-color: $white;
+	border-bottom: 2px solid $purple;
+	padding: 3rem !important;
+	transition: all 0.4s ease;
+	.navbar-brand {
+		color: $brown;
+		font-family: $f-fanwood;
+		font-style: italic;
+		font-size: $f-bigger;
+		transition: 0.2s;
+		&:hover {
+			color: $red;
+		}
+	}
+	.navbar-nav .nav-link {
+		color: $black;
+		font-size: $f-normal;
+		transition: 0.1s;
+	}
+	.nav-item.active .nav-link {
+		color: $black;
+	}
+	.nav-item:hover .nav-link {
+		color: $red;
+	}
+	.dropdown-menu {
+		background-color: $white;
+		border-radius: 0;
+		padding: 1rem 1rem 1rem 0;
+		border: 2px solid $black;
+	}
+	.dropdown-item {
+		font-size: $f-normal;
+		&:hover {
+			color: $red;
+		}
+	}
+}
+nav.navbar.shrink {
+	padding: 2rem 3rem !important;
+}
+
+// Hamburger animation
+.navbar-toggler {
+	border: none;
+	background: transparent !important;
+}
+
+.navbar-toggler:focus {
+	outline: none;
+	background: transparent !important;
+}
+
+.navbar-toggler .icon-bar {
+	background-color: $black;
+	transform: rotate(0deg) translate(0px, 0px);
+	transition: ease all 0.2s;
+}
+
+.navbar-toggler .icon-bar {
+	display: block;
+	width: 22px;
+	height: 2px;
+	border-radius: 1px;
+}
+
+.navbar-toggler .icon-bar + .icon-bar {
+	margin-top: 4px;
+}
+
+.icon-bar:nth-child(2) {
+	width: 22px;
+	transition: ease all 0.2s;
+}
+
+.navbar-toggler:hover > .icon-bar:nth-child(2) {
+	width: 22px;
+	transition: ease all 0.2s;
+}
+
+.navbar-toggler:active > .icon-bar:nth-child(2) {
+	width: 22px;
+	transition: ease all 0.2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(1) {
+	transform: rotate(45deg) translate(5px, 4px);
+	transition: ease all 0.2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(2) {
+	opacity: 0;
+	transition: ease all 0.2s;
+}
+
+.navbar-toggler:not(.collapsed) .icon-bar:nth-child(3) {
+	transform: rotate(-45deg) translate(4px, -4px);
+	transition: ease all 0.2s;
+}
+
+
+// tours navigation
+
+.nav-tours {
+	background-color: transparent;
+	margin-bottom: 5rem;
+	padding: 2rem;
+	.nav-item {
+		font-size: $f-big;
+		font-weight: 900;
+		transition: 0.2s ease;
+		background-color: $white;
+		padding: 2rem;
+		margin-bottom: 2rem;
+	}
+}

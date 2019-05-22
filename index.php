@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="nl"> <![endif]-->
+	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="nl"> <![endif]-->
+	<!--[if IE 8]>         <html class="no-js lt-ie9" lang="nl"> <![endif]-->
+
+	<title>Save The Earth</title>
+
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+		integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="assets/css/master.min.css" />
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+			<p class="browserupgrade">
+				You are using an <strong>outdated</strong> browser. Please
+				<a href="https://browsehappy.com/">upgrade your browser</a> to improve
+				your experience and security.
+			</p>
+		<![endif]-->
+	<!-- spinner -->
+	<!-- <script>
+		document.querySelector("body").style.display = "none";
+		document.querySelector("html").classList.add("spinner-3");
+
+		setTimeout(function () {
+			document.querySelector("html").classList.remove("spinner-3");
+			document.querySelector("body").style.display = "block";
+		}, 1500);
+	</script> -->
+
+	<!-- body -->
+
+	<button class="btn scrollToTop">
+		<i class="fas fa-angle-up fa-2x"></i>
+	</button>
+
+	<!-- navigation -->
+
+	<header>
+		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
+			<div class="container">
+				<a class="navbar-brand" href="/">Green Our Lives</a>
+
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="icon-bar top-bar"></span>
+					<span class="icon-bar middle-bar"></span>
+					<span class="icon-bar bottom-bar"></span>
+					<span class="sr-only">Toggle navigation</span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarResponsive">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link pr-md-4" href="index.php">home
+								<span class="sr-only">(current)</span>
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4" href="test.php">doe de test!</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4" href="about.php">over ons & het project</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4" href="shop.php">beloningen</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<section class="container-fluid">
+		<div class="row">
+			<h1 class="header-text mx-auto">Save The Earth</h1>
+			<div class="col-sm-12 text-center">
+				<p class="header-subtext">Bekijk hoe jij bij kan dragen aan een groenere toekomst!</p>
+				<a href="test.php" class="btn">Doe de test!</a>
+			</div>
+		</div>
+	</section>
+
+	<main role="main">
+		<div class="container-fluid marketing">
+			<div class="row">
+				<div class="col-sm-6"></div>
+				<div class="col-sm-6"></div>
+			</div>
+
+			<hr />
+
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2>Book Now!</h2>
+					<p>
+						Book one of our tours now! Our bookings are handled via
+						<a href="https://www.planyo.com/">Planyo.com</a>. More information
+						about Planyo can be found on their website.
+					</p>
+					<p class="text-center">
+						<a href="#" class="btn btn-lg btn-CTA-1">Make a Booking!</a>
+					</p>
+				</div>
+				<div class="col-md-5">
+					<img class="img-fluid" src="assets/img/images/colombia.jpg" alt="Carlito's Adventures" />
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="row featurette">
+				<div class="col-md-7 order-md-2">
+					<h2>
+						Second header
+						<span class="text-muted">Potential second subheader</span>
+					</h2>
+					<p>
+						(room for about 40 words) Lorem ipsum dolor sit amet consectetur
+						adipisicing elit. Repellat fuga perferendis velit blanditiis
+						distinctio. Esse doloremque, quae neque ea ipsam a quisquam ex aut
+						recusandae culpa perspiciatis necessitatibus beatae debitis fuga,
+						soluta facilis labore aspernatur error reiciendis. Voluptates,
+						soluta atque?
+					</p>
+				</div>
+				<div class="col-md-5 order-md-1">
+					<img class="img-fluid" src="assets/img/images/colombia2.jpg" alt="Carlito's Adventures" />
+				</div>
+			</div>
+
+			<hr />
+
+			<div class="row featurette">
+				<div class="col-md-7">
+					<h2>
+						Third header
+						<span class="text-muted">Potential third subheader</span>
+					</h2>
+					<p>
+						(room for about 40 words) Lorem ipsum dolor sit amet consectetur
+						adipisicing elit. Repellat fuga perferendis velit blanditiis
+						distinctio. Esse doloremque, quae neque ea ipsam a quisquam ex aut
+						recusandae culpa perspiciatis necessitatibus beatae debitis fuga,
+						soluta facilis labore aspernatur error reiciendis. Voluptates,
+						soluta atque?
+					</p>
+				</div>
+				<div class="col-md-5">
+					<img class="img-fluid" src="assets/img/images/compass.jpg" alt="Carlito's Adventures" />
+				</div>
+			</div>
+		</div>
+
+		<!-- footer -->
+
+		<footer class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="text-center">
+						&copy; Copyright |
+						<a href="greenourlives.com">GreenOurLives.com</a>
+					</p>
+				</div>
+				<div class="col-md-6 text-center text-md-left">
+					<hr />
+					<p>
+						<a href="index.php">All our Tours</a>
+					</p>
+					<p>
+						<a href="test.php">Activities</a>
+					</p>
+					<p>
+						<a href="about.php">Services & Accomodations</a>
+					</p>
+					<p>
+						<a href="shop.php">Contact</a>
+					</p>
+				</div>
+				<div class="col-md-6 text-center text-md-left">
+					<hr />
+					<a href="https://www.facebook.com/carlitosadventures/" target="_blank" class="pr-4">
+						<i class="fab fa-facebook-f fa-3x"></i>
+					</a>
+					<a href="https://www.instagram.com/carlitos_mde/" target="_blank" class="pr-4">
+						<i class="fab fa-instagram fa-3x"></i>
+					</a>
+					<a href="mailto:carlitosadventures@gmail.com">
+						<i class="far fa-envelope fa-3x"></i>
+					</a>
+				</div>
+			</div>
+		</footer>
+	</main>
+
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+	<script src="assets/js/jquery-easing.min.js"></script>
+	<script src="assets/js/scripts.min.js"></script>
+</body>
+
+</html>

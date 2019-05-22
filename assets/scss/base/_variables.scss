@@ -1,0 +1,36 @@
+/* imports */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway|Oswald:400,700|Fanwood+Text");
+
+/* colors */
+
+$primary-color: #f4f9f4;
+$secondary-color: #c4e3cb;
+$tertiary-color: #8aae92;
+$quaternary-color: #616161;
+
+/* standard */
+
+$white: #fbfbfb;
+$light-grey: #ececec;
+$grey: rgba(183, 183, 183, 1);
+$black: #0e1013;
+$dark-grey: rgba(119, 119, 119, 1);
+
+/* main */
+
+$blue: #16738f;
+$light-blue: #b9e1dc;
+$brown: #773800;
+$red: #ff610d;
+$purple: #6c5e81;
+
+/* fonts */
+
+$f-raleway: "Raleway", sans-serif;
+$f-oswald: "Oswald", sans-serif;
+$f-fanwood: 'Fanwood Text', serif;
+$f-small: 1.4rem;
+$f-normal: 2rem;
+$f-big: 2.4rem;
+$f-bigger: 3.2rem;

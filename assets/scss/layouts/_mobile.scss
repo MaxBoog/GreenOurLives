@@ -1,0 +1,38 @@
+// styles for smaller screens
+
+@media (max-width: 991px) {
+	.cont {
+		max-width: 90vw;
+	}
+
+	hr {
+		margin: 5rem 0;
+	}
+}
+
+// styles for larger screens.
+
+@media (min-width: 991px) {
+	.navbar-custom {
+		padding: 3rem;
+	}
+
+	.header-text {
+		padding-top: 20rem;
+		font-size: 80px;
+	}
+	.header-subtext {
+		font-size: 30px;
+		padding-bottom: 20rem;
+	}
+	.cont {
+		padding: 5rem;
+	}
+
+	.nav-tours {
+		display: flex;
+		.nav-item {
+			margin: 0 1rem;
+		}
+	}
+}
