@@ -35,14 +35,14 @@
 	&:active {
 		box-shadow: none !important;
 		color: white !important;
-		background-color: $red !important;
-		border-color: $red !important;
+		background-color: $quaternary-color !important;
+		border-color: $quaternary-color !important;
 		outline: none !important;
 	}
 	&:focus {
 		color: white !important;
-		background-color: $red !important;
-		border-color: $red !important;
+		background-color: $quaternary-color !important;
+		border-color: $quaternary-color !important;
 		box-shadow: none !important;
 	}
 }

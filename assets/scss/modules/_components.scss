@@ -9,3 +9,19 @@
 	font-size: $f-bigger;
 	color: $dark-grey;
 }
+
+.card {
+	margin-bottom: 5rem;
+	.card-link {
+		color: $quaternary-color;
+		border: 2px solid $quaternary-color;
+		padding: 1rem;
+		border-radius: 7px;
+		transition: 0.1s;
+		&:hover {
+			background-color: $quaternary-color;
+			color: $white;
+		}
+	}
+}
+

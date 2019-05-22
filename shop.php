@@ -86,15 +86,140 @@
 	</header>
 	<section class="container-fluid">
 		<div class="row">
-			<h1 class="header-text mx-auto">Green Our Lives</h1>
+			<h1 class="header-text mx-auto">Beloningen</h1>
 			<div class="col-sm-12 text-center">
-				<p class="header-subtext">Bekijk hoe jij bij kan dragen aan een groenere toekomst!</p>
-				<a href="test.php" class="btn btn-CTA-1">Doe de test!</a>
+				<p class="header-subtext">Bekijk hier wat je kan kopen met je gespaarde punten.</p>
 			</div>
 		</div>
 	</section>
 
 	<main role="main">
+
+	<section class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Lorem, ipsum.</h5>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="card-link">Buy</a>
+						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			<div class="card">
+					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Lorem, ipsum.</h5>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="card-link">Buy</a>
+						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			<div class="card">
+					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Lorem, ipsum.</h5>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="card-link">Buy</a>
+						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Lorem, ipsum.</h5>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="card-link">Buy</a>
+						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			<div class="card">
+					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Lorem, ipsum.</h5>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="card-link">Buy</a>
+						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			<div class="card">
+					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Lorem, ipsum.</h5>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="card-link">Buy</a>
+						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card">
+					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Lorem, ipsum.</h5>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="card-link">Buy</a>
+						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			<div class="card">
+					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Lorem, ipsum.</h5>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="card-link">Buy</a>
+						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-4">
+			<div class="card">
+					<img src="https://via.placeholder.com/150/000000/FFFFFF/" class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Lorem, ipsum.</h5>
+						<p class="card-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, et.</p>
+					</div>
+					<div class="card-body">
+						<a href="#" class="card-link">Buy</a>
+						<p style="padding-left: 1rem; display: inline-block;"><s>$50</s> $35</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 		<!-- footer -->
 
 		<footer class="container">
@@ -122,13 +247,13 @@
 				</div>
 				<div class="col-md-6 text-center text-md-left">
 					<hr />
-					<a href="https://www.facebook.com/carlitosadventures/" target="_blank" class="pr-4">
+					<a href="#" target="_blank" class="pr-4">
 						<i class="fab fa-facebook-f fa-3x"></i>
 					</a>
-					<a href="https://www.instagram.com/carlitos_mde/" target="_blank" class="pr-4">
+					<a href="#" target="_blank" class="pr-4">
 						<i class="fab fa-instagram fa-3x"></i>
 					</a>
-					<a href="mailto:carlitosadventures@gmail.com">
+					<a href="mailto:info@greenourlives.com">
 						<i class="far fa-envelope fa-3x"></i>
 					</a>
 				</div>

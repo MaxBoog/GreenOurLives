@@ -33,7 +33,8 @@ hr {
 
 a {
   text-decoration: none;
-  color: #16738f; }
+  color: #16738f;
+  font-size: 2rem; }
   a:hover {
     text-decoration: none;
     color: #616161; }
@@ -85,13 +86,13 @@ a {
     -webkit-box-shadow: none !important;
     box-shadow: none !important;
     color: white !important;
-    background-color: #ff610d !important;
-    border-color: #ff610d !important;
+    background-color: #616161 !important;
+    border-color: #616161 !important;
     outline: none !important; }
   .btn-CTA-1:focus, .btn-send:focus {
     color: white !important;
-    background-color: #ff610d !important;
-    border-color: #ff610d !important;
+    background-color: #616161 !important;
+    border-color: #616161 !important;
     -webkit-box-shadow: none !important;
     box-shadow: none !important; }
 
@@ -205,6 +206,20 @@ a {
 .tours-heading {
   font-size: 3.2rem;
   color: #777777; }
+
+.card {
+  margin-bottom: 5rem; }
+  .card .card-link {
+    color: #616161;
+    border: 2px solid #616161;
+    padding: 1rem;
+    border-radius: 7px;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s; }
+    .card .card-link:hover {
+      background-color: #616161;
+      color: #fbfbfb; }
 
 input[type="text"], input[type="email"], input[type="tel"], textarea {
   border: none !important;
@@ -374,6 +389,7 @@ nav.navbar.shrink {
   font-size: 3.2rem; }
 
 .header-subtext {
+  padding-bottom: 10rem;
   color: #8aae92;
   font-family: "Changa One", sans-serif; }
 

@@ -122,13 +122,13 @@
 				</div>
 				<div class="col-md-6 text-center text-md-left">
 					<hr />
-					<a href="https://www.facebook.com/carlitosadventures/" target="_blank" class="pr-4">
+					<a href="#" target="_blank" class="pr-4">
 						<i class="fab fa-facebook-f fa-3x"></i>
 					</a>
-					<a href="https://www.instagram.com/carlitos_mde/" target="_blank" class="pr-4">
+					<a href="#" target="_blank" class="pr-4">
 						<i class="fab fa-instagram fa-3x"></i>
 					</a>
-					<a href="mailto:carlitosadventures@gmail.com">
+					<a href="mailto:info@greenourlives.com">
 						<i class="far fa-envelope fa-3x"></i>
 					</a>
 				</div>
