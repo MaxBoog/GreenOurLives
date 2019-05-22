@@ -89,12 +89,9 @@ $_SESSION["login"] = false;
 							Welkom ' . $_SESSION["username"];
 						}
 						?>
-						<!-- <li class="nav-item">
-							<a class="nav-link pr-md-4" href="login.php">inloggen</a>
-						</li>
 						<li class="nav-item">
 							<a class="nav-link pr-md-4" href="register.php">account aanmaken</a>
-						</li> -->
+						</li>
 					</ul>
 				</div>
 			</div>
