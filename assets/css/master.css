@@ -40,7 +40,7 @@ a {
     color: #616161; }
 
 .cont {
-  background-color: #c4e3cb;
+  background-color: #aee6bb;
   border-radius: 20px;
   padding: 2rem;
   margin-bottom: 1rem; }
@@ -281,7 +281,7 @@ textarea {
       color: #616161; }
   .navbar-custom .navbar-nav .nav-link {
     color: #0e1013;
-    font-size: 2rem;
+    font-size: 1.4rem;
     -webkit-transition: 0.1s;
     -o-transition: 0.1s;
     transition: 0.1s; }

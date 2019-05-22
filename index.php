@@ -71,13 +71,16 @@
 							<a class="nav-link pr-md-4" href="test.php">doe de test!</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="about.php">over ons & het project</a>
+							<a class="nav-link pr-md-4" href="about.php">over ons</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link pr-md-4" href="shop.php">beloningen</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link pr-md-4" href="login.php">inloggen</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4" href="register.php">account aanmaken</a>
 						</li>
 					</ul>
 				</div>
