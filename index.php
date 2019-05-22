@@ -76,6 +76,9 @@
 						<li class="nav-item">
 							<a class="nav-link pr-md-4" href="shop.php">beloningen</a>
 						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4" href="login.php">inloggen</a>
+						</li>
 					</ul>
 				</div>
 			</div>
