@@ -18,10 +18,10 @@ body {
   font-weight: 300 !important;
   line-height: 3.4rem;
   color: #0e1013;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(white), to(white));
-  background-image: -webkit-linear-gradient(top right, white, white);
-  background-image: -o-linear-gradient(top right, white, white);
-  background-image: linear-gradient(to bottom left, white, white); }
+  background-image: -webkit-gradient(linear, right top, left bottom, from(white), to(#f4f9f4));
+  background-image: -webkit-linear-gradient(top right, white, #f4f9f4);
+  background-image: -o-linear-gradient(top right, white, #f4f9f4);
+  background-image: linear-gradient(to bottom left, white, #f4f9f4); }
 
 p {
   font-size: 2rem; }
@@ -399,11 +399,11 @@ footer {
   padding: 3rem;
   color: #0e1013; }
   footer hr {
-    border-color: #0e1013; }
+    border-color: #616161; }
   footer a {
-    color: #0e1013; }
+    color: #616161; }
     footer a:hover {
-      color: #616161; }
+      color: #8aae92; }
 
 @media (max-width: 991px) {
   .cont {

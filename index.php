@@ -29,15 +29,15 @@
 			</p>
 		<![endif]-->
 	<!-- spinner -->
-	<!-- <script>
+	<script>
 		document.querySelector("body").style.display = "none";
 		document.querySelector("html").classList.add("spinner-3");
 
 		setTimeout(function () {
 			document.querySelector("html").classList.remove("spinner-3");
 			document.querySelector("body").style.display = "block";
-		}, 1500);
-	</script> -->
+		}, 1000);
+	</script>
 
 	<!-- body -->
 
