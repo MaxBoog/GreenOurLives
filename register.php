@@ -120,7 +120,7 @@ $_SESSION["login"] = false;
 				<button type="submit" name="register" value="Account aanmaken" class="btn btn-CTA-1">Account aanmaken</button>
 				<a class="btn btn-CTA-1" href="register.php">Of meld je aan.</a>
 			</form>
-		<form action="" method="post">
+		<!-- <form action="" method="post">
 			<table>
 				<tr>
 					<td>Email</td><td><input type="text" name="email" maxlength="64" /></td>
@@ -138,7 +138,7 @@ $_SESSION["login"] = false;
 					<td><input type="submit" name="register" value="Account aanmaken" /></td><td></td>
 				</tr>
 			</table>
-		</form><br />
+		</form><br /> -->
 		</div>
 <?php
 if (isset($_POST["register"])) {
