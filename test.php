@@ -33,15 +33,15 @@ $_SESSION["login"] = false;
 			</p>
 		<![endif]-->
 	<!-- spinner -->
-	<!-- <script>
+	<script>
 		document.querySelector("body").style.display = "none";
 		document.querySelector("html").classList.add("spinner-3");
 
 		setTimeout(function () {
 			document.querySelector("html").classList.remove("spinner-3");
 			document.querySelector("body").style.display = "block";
-		}, 1000);
-	</script> -->
+		}, 800);
+	</script>
 
 	<!-- body -->
 
