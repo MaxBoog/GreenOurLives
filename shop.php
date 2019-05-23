@@ -6,7 +6,7 @@
 	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="nl"> <![endif]-->
 	<!--[if IE 8]>         <html class="no-js lt-ie9" lang="nl"> <![endif]-->
 
-	<title>Save The Earth</title>
+	<title>Green Our Lives</title>
 
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -92,7 +92,7 @@
 			<h1 class="header-text mx-auto">Beloningen</h1>
 			<div class="col-sm-12 text-center">
 				<p class="header-subtext">Bekijk hier wat je kan kopen met je gespaarde punten.</p>
-				<p class="pb-5">Je hebt op dit moment 34 munten!</p>
+				<p class="pb-5">Je hebt op dit moment 34 punten!</p>
 			</div>
 		</div>
 	</section>

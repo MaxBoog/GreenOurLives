@@ -18,10 +18,10 @@ body {
   font-weight: 300 !important;
   line-height: 3.4rem;
   color: #0e1013;
-  background-image: -webkit-gradient(linear, right top, left bottom, from(white), to(#f4f9f4));
-  background-image: -webkit-linear-gradient(top right, white, #f4f9f4);
-  background-image: -o-linear-gradient(top right, white, #f4f9f4);
-  background-image: linear-gradient(to bottom left, white, #f4f9f4); }
+  background-image: -webkit-gradient(linear, right top, left bottom, from(white), to(#fbfbfb));
+  background-image: -webkit-linear-gradient(top right, white, #fbfbfb);
+  background-image: -o-linear-gradient(top right, white, #fbfbfb);
+  background-image: linear-gradient(to bottom left, white, #fbfbfb); }
 
 p {
   font-size: 2rem; }
@@ -221,7 +221,7 @@ a {
       background-color: #8aae92;
       color: #fbfbfb; }
 
-input[type="text"], input[type="email"], input[type="tel"], textarea {
+input[type="text"], input[type="password"], input[type="email"], input[type="tel"], textarea {
   border: none !important;
   border-radius: 0 !important;
   padding: 1.5rem !important;
@@ -234,7 +234,7 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
   box-shadow: none !important;
   color: #0e1013;
   border-bottom: 2px solid #b7b7b7 !important; }
-  input[type="text"]:focus, input:focus[type="email"], input:focus[type="tel"], textarea:focus {
+  input[type="text"]:focus, input:focus[type="password"], input:focus[type="email"], input:focus[type="tel"], textarea:focus {
     border-bottom: 2px solid #ff610d !important;
     outline-color: transparent !important; }
 
@@ -415,7 +415,7 @@ footer {
   .navbar-custom {
     padding: 3rem; }
   .header-text {
-    padding-top: 20rem;
+    padding-top: 10rem;
     font-size: 80px; }
   .header-subtext {
     font-size: 30px;

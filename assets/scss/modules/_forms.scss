@@ -13,6 +13,9 @@ input[type="text"] {
 		outline-color: transparent !important;
 	}
 }
+input[type="password"] {
+	@extend input[type="text"];
+}
 
 input[type="email"] {
 	@extend input[type="text"];

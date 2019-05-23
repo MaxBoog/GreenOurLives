@@ -11,7 +11,7 @@ $_SESSION["login"] = false;
 		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="nl"> <![endif]-->
 		<!--[if IE 8]>         <html class="no-js lt-ie9" lang="nl"> <![endif]-->
 
-		<title>Save The Earth</title>
+		<title>Green Our Lives</title>
 
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -98,7 +98,14 @@ $_SESSION["login"] = false;
 		</nav>
 	</header>
 
-		<h1>Test</h1><br />
+	<section class="container-fluid">
+		<div class="row">
+			<h1 class="header-text mx-auto">Test</h1>
+			<div class="col-sm-12 text-center">
+				<p class="header-subtext">Bereken hier je ecologische voetafdruk</p>
+			</div>
+		</div>
+	</section>
 <?php
 if (isset($_POST["submit"])) {
 	$q1 = $_POST["q1"];
@@ -124,11 +131,17 @@ if (isset($_POST["submit"])) {
 	$q15 = $_POST["q15"];
 	$q16 = $_POST["q16"];
 	$points = $q1 + $q2 + $q3 + $q4 + $q5 + $q6 + $q7 + $q8 + $q9 + $q10 + $q11 + $q12 + $q13 + $q14 + $q15 + $q16;
-	echo "Je score is $points punten!";
+	echo "<div class='container mx-auto'>
+			<div class='row'>
+			  <h1 class='mx-auto'>Je score is $points punten! </h1>
+			  </row>
+		  </div>";
 }
 else {
 	echo '
+	<div class="container">
 		<form action="" method="post">
+
 			<table id="test">			
 				<tr><th></th><th><h3>1. Met welk vervoersmiddel ga je naar school/werk?</h3></th></tr>
 				<tr><td><input type="radio" name="q1" value="0" /></td><td>Lopen of fiets</td></tr>
@@ -227,12 +240,58 @@ else {
 				<tr><td></td><td><hr /></td></tr>
 				<tr><td></td><td><input type="submit" name="submit" value="Bereken je uitslag" /></td></tr>
 				</table>
-		</form><br />	
+		</form><br />
+	</div>	
 	';
 }
 ?>
-		<footer>
-			<p>Alle rechten voorbehouden. &copy; <?php echo date("Y");?></p>
+
+		<footer class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<p class="text-center">
+						&copy; Copyright |
+						<a href="greenourlives.com">GreenOurLives.com</a>
+					</p>
+				</div>
+				<div class="col-md-6 text-center text-md-left">
+					<hr />
+					<p>
+						<a href="index.php">home</a>
+					</p>
+					<p>
+						<a href="test.php">doe de test!</a>
+					</p>
+					<p>
+						<a href="about.php">over ons & het project</a>
+					</p>
+					<p>
+						<a href="shop.php">beloningen</a>
+					</p>
+				</div>
+				<div class="col-md-6 text-center text-md-left">
+					<hr />
+					<a href="#" target="_blank" class="pr-4">
+						<i class="fab fa-facebook-f fa-3x"></i>
+					</a>
+					<a href="#" target="_blank" class="pr-4">
+						<i class="fab fa-instagram fa-3x"></i>
+					</a>
+					<a href="mailto:info@greenourlives.com">
+						<i class="far fa-envelope fa-3x"></i>
+					</a>
+				</div>
+			</div>
 		</footer>
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"></script>
+		<script src="assets/js/jquery-easing.min.js"></script>
+		<script src="assets/js/scripts.min.js"></script>
 	</body>
 </html>

@@ -6,7 +6,7 @@
 	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="nl"> <![endif]-->
 	<!--[if IE 8]>         <html class="no-js lt-ie9" lang="nl"> <![endif]-->
 
-	<title>Save The Earth</title>
+	<title>Green Our Lives</title>
 
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
