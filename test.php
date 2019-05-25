@@ -1,7 +1,7 @@
 <?php
 session_start();
 if (!isset($_SESSION["login"])) {
-$_SESSION["login"] = false;
+	$_SESSION["login"] = false;
 }
 ?>
 <!DOCTYPE html>
@@ -10,13 +10,10 @@ $_SESSION["login"] = false;
 		<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="nl"> <![endif]-->
 		<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="nl"> <![endif]-->
 		<!--[if IE 8]>         <html class="no-js lt-ie9" lang="nl"> <![endif]-->
-
 		<title>Green Our Lives</title>
-
-		<meta charset="utf-8" />
+		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 		<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
 			integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
 			crossorigin="anonymous"></script>
@@ -42,20 +39,15 @@ $_SESSION["login"] = false;
 			document.querySelector("body").style.display = "block";
 		}, 800);
 	</script>
-
 	<!-- body -->
-
 	<button class="btn scrollToTop">
 		<i class="fas fa-angle-up fa-2x"></i>
 	</button>
-
 	<!-- navigation -->
-
 	<header>
 		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
 			<div class="container">
 				<a class="navbar-brand" href="index.php">Green Our Lives</a>
-
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
 					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -67,39 +59,55 @@ $_SESSION["login"] = false;
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link pr-md-4" onclick="window.location.href='index.php'">home
+							<a class="nav-link pr-md-4" href="index.php">Home
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" onclick="window.location.href='test.php'">doe de test!</a>
+							<a class="nav-link pr-md-4" href="test.php">Doe de test!</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" onclick="window.location.href='about.php'">over ons</a>
+							<a class="nav-link pr-md-4" href="about.php">Over ons</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" onclick="window.location.href='shop.php'">beloningen</a>
+							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4" href="shop.php">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4" href="shop.php">Search</a>
 						</li>
 						<?php
 						if ($_SESSION["login"] != true) {
-							echo '<li class="nav-item"><a class="nav-link pr-md-4" onclick="window.location.href=\'login.php\'">inloggen</a></li>';
+							echo '<li class="nav-item">
+									  <a class="nav-link pr-md-4" href="login.php">Inloggen</a></li>
+								  <li class="nav-item">
+									  <a class="nav-link pr-md-4" href="register.php">Account aanmaken  <i class="fas fa-user-plus"></i></a>
+								  </li>';
 						}
 						else {
-							echo '<li class="nav-item"><a class="nav-link pr-md-4" onclick="window.location.href=\'register.php\'">account aanmaken</a></li>
-							Welkom ' . $_SESSION["username"];
+						echo '<li class="nav-item">
+								  <a class="nav-link pr-md-4" href="profile.php">Profiel</a>
+							  </li>
+							  <li class="nav-item">
+								  <a class="nav-link pr-md-4" href="logout.php">Log uit <i class="fas fa-sign-out-alt"></i></a>
+							  </li><br />';
 						}
 						?>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="register.php">account aanmaken</a>
-						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</header>
-
 	<section class="container-fluid">
+	<div class="row">
+			<?php if ($_SESSION["login"] == true) {
+				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
+			}?>
+		</div>
 		<div class="row">
+
 			<h1 class="header-text mx-auto">Test</h1>
 			<div class="col-sm-12 text-center">
 				<p class="header-subtext">Bereken hier je ecologische voetafdruk</p>
@@ -245,7 +253,6 @@ else {
 	';
 }
 ?>
-
 		<footer class="container">
 			<div class="row">
 				<div class="col-md-12">
@@ -283,7 +290,6 @@ else {
 				</div>
 			</div>
 		</footer>
-
 		<script src="assets/js/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

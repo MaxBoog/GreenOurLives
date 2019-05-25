@@ -1,7 +1,11 @@
 <?php
 session_start();
 if (!isset($_SESSION["login"])) {
-$_SESSION["login"] = false;
+	$_SESSION["login"] = false;
+}
+if ($_SESSION["login"] == true) {
+	header("Location: index.php");
+	exit();
 }
 ?>
 <!DOCTYPE html>
@@ -10,13 +14,10 @@ $_SESSION["login"] = false;
 	<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="nl"> <![endif]-->
 	<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang="nl"> <![endif]-->
 	<!--[if IE 8]>         <html class="no-js lt-ie9" lang="nl"> <![endif]-->
-
 	<title>Green Our Lives</title>
-
-	<meta charset="utf-8" />
+	<meta charset="UTF-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
 	<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
 		integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
 		crossorigin="anonymous"></script>
@@ -25,6 +26,7 @@ $_SESSION["login"] = false;
 	<link rel="stylesheet" type="text/css" href="assets/css/master.min.css" />
 </head>
 	<body>
+		<main>
 	<!--[if lte IE 9]>
 			<p class="browserupgrade">
 				You are using an <strong>outdated</strong> browser. Please
@@ -42,18 +44,14 @@ $_SESSION["login"] = false;
 			document.querySelector("body").style.display = "block";
 		}, 800);
 	</script>
-
 	<button class="btn scrollToTop">
 		<i class="fas fa-angle-up fa-2x"></i>
 	</button>
-
 	<!-- navigation -->
-
 	<header>
 		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
 			<div class="container">
 				<a class="navbar-brand" href="index.php">Green Our Lives</a>
-
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
 					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
 					aria-label="Toggle navigation">
@@ -65,37 +63,53 @@ $_SESSION["login"] = false;
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link pr-md-4" href="index.php">home
+							<a class="nav-link pr-md-4" href="index.php">Home
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="test.php">doe de test!</a>
+							<a class="nav-link pr-md-4" href="test.php">Doe de test!</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="about.php">over ons</a>
+							<a class="nav-link pr-md-4" href="about.php">Over ons</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">beloningen</a>
+							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4" href="shop.php">Contact</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4" href="shop.php">Search</a>
 						</li>
 						<?php
 						if ($_SESSION["login"] != true) {
-							echo '<li class="nav-item"><a class="nav-link pr-md-4" onclick="window.location.href=\'login.php\'">inloggen</a></li>';
+							echo '<li class="nav-item">
+									  <a class="nav-link pr-md-4" href="login.php">Inloggen  <i class="fas fa-sign-in-alt"></i></a></li>
+								  <li class="nav-item">
+									  <a class="nav-link pr-md-4" href="register.php">Account aanmaken  <i class="fas fa-user-plus"></i></a>
+								  </li>';
 						}
 						else {
-							echo '<li class="nav-item"><a class="nav-link pr-md-4"> onclick="window.location.href=\'logout.php\'">log uit</a></li>
-							Welkom ' . $_SESSION["username"];
+						echo '<li class="nav-item">
+								  <a class="nav-link pr-md-4" href="profile.php">Profiel</a>
+							  </li>
+							  <li class="nav-item">
+								  <a class="nav-link pr-md-4" href="logout.php">Log uit <i class="fas fa-sign-out-alt"></i></a>
+							  </li><br />';
 						}
 						?>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="register.php">account aanmaken</a>
-						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
-		
+	</header>	
 		<section class="container-fluid">
+		<div class="row">
+			<?php if ($_SESSION["login"] == true) {
+				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
+			}?>
+		</div>
 			<div class="row">
 				<h1 class="header-text mx-auto">Inloggen</h1>
 			</div>
@@ -103,14 +117,12 @@ $_SESSION["login"] = false;
 		<div class="container">
 			<form action="" method="post">
 				<div class="form-group">
-					<input type="text" class="form-control" name="username" maxlength="32" placeholder="Gebruikersnaam...">
-					
+					<input type="text" class="form-control" name="username" maxlength="32" placeholder="Gebruikersnaam..." />
 				</div>
 				<div class="form-group">
-					<input type="password" class="form-control" name="password" placeholder="Wachtwoord...">
+					<input type="password" class="form-control" name="password" placeholder="Wachtwoord..." />
 				</div>
-				
-				<button type="submit" name="login" value="Inloggen" class="btn btn-CTA-1">Inloggen</button>
+				<input type="submit" name="login" value="Inloggen" class="btn btn-CTA-1" />
 			</form>
 		<!-- </form>
 			<form action="" method="post">
@@ -135,16 +147,15 @@ if (isset($_POST["login"])) {
 	$password = str_replace(array("'", '"'), "1", $password);
 	if (!empty($username && $password)) {
 		$username = base64_encode($username);
-		$password = md5(md5(sha1(sha1($password,))));
-		$connect = mysqli_connect("localhost", "root", "", "goal") or die("Verbinding met de database mislukt!");
-		$select = "SELECT * FROM users WHERE username = '$username' AND password = '$password';";
+		$password = md5(md5(sha1(sha1($password))));
+		$connect = mysqli_connect("sql7.freemysqlhosting.net", "sql7293177", "URPnwJnuSN", "sql7293177") or die ("Verbinding met de database mislukt!");
+		$select = "SELECT username, password FROM users WHERE username = '$username' AND password = '$password';";
 		$query = mysqli_query($connect, $select) or die ("Opvragen aanmeldingsgegevens uit de database mislukt!");
 		if (mysqli_num_rows($query) > 0) {
 			while ($row = mysqli_fetch_assoc($query)) {
 				$_SESSION["login"] = true;
 				$_SESSION["username"] = base64_decode($row["username"]);
-				header("Location: index.php");
-				exit();
+				echo '<script>window.location.href="index.php";</script>';
 			}
 		}
 		else {
@@ -195,7 +206,6 @@ if (isset($_POST["login"])) {
 			</div>
 		</footer>
 	</main>
-
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
