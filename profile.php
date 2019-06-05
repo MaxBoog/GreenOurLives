@@ -54,10 +54,10 @@ if ($_SESSION["login"] != true) {
 							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Contact</a>
+							<a class="nav-link pr-md-4" href="contact.php">Contact</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Search</a>
+							<a class="nav-link pr-md-4" href="search.php">Zoeken</a>
 						</li>
 						<?php
 						if ($_SESSION["login"] != true) {
@@ -147,8 +147,7 @@ if (isset($_POST["changepwd"])) {
 			<div class="row">
 				<div class="col-md-12">
 					<p class="text-center">
-						&copy; Copyright |
-						<a href="greenourlives.com">GreenOurLives.com</a>
+						&copy; <?php echo date("Y"); ?> <a href="">GreenOurLives.com</a>
 					</p>
 				</div>
 				<div class="col-md-6 text-center text-md-left">
@@ -160,10 +159,22 @@ if (isset($_POST["changepwd"])) {
 						<a href="test.php">Doe de test!</a>
 					</p>
 					<p>
-						<a href="about.php">over ons & het project</a>
+						<a href="about.php">Over ons & het project</a>
 					</p>
 					<p>
-						<a href="shop.php">beloningen</a>
+						<a href="shop.php">Beloningen</a>
+					</p>
+					<p>
+						<a href="contact.php">Contact</a>
+					</p>
+					<p>
+						<a href="search.php">Search</a>
+					</p>
+					<p>
+						<a href="login.php">Inloggen</a>
+					</p>
+					<p>
+						<a href="register.php">Account aanmaken</a>
 					</p>
 				</div>
 				<div class="col-md-6 text-center text-md-left">

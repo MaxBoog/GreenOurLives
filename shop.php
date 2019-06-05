@@ -73,10 +73,10 @@ if (!isset($_SESSION["login"])) {
 							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Contact</a>
+							<a class="nav-link pr-md-4" href="contact.php">Contact</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Search</a>
+							<a class="nav-link pr-md-4" href="search.php">Zoeken</a>
 						</li>
 						<?php
 						if ($_SESSION["login"] != true) {
@@ -246,23 +246,34 @@ if (!isset($_SESSION["login"])) {
 			<div class="row">
 				<div class="col-md-12">
 					<p class="text-center">
-						&copy; Copyright |
-						<a href="greenourlives.com">GreenOurLives.com</a>
+						&copy; <?php echo date("Y"); ?> <a href="">GreenOurLives.com</a>
 					</p>
 				</div>
 				<div class="col-md-6 text-center text-md-left">
 					<hr />
 					<p>
-						<a href="index.php">home</a>
+						<a href="index.php">Home</a>
 					</p>
 					<p>
-						<a href="test.php">doe de test!</a>
+						<a href="test.php">Doe de test!</a>
 					</p>
 					<p>
-						<a href="about.php">over ons & het project</a>
+						<a href="about.php">Over ons & het project</a>
 					</p>
 					<p>
-						<a href="shop.php">beloningen</a>
+						<a href="shop.php">Beloningen</a>
+					</p>
+					<p>
+						<a href="contact.php">Contact</a>
+					</p>
+					<p>
+						<a href="search.php">Search</a>
+					</p>
+					<p>
+						<a href="login.php">Inloggen</a>
+					</p>
+					<p>
+						<a href="register.php">Account aanmaken</a>
 					</p>
 				</div>
 				<div class="col-md-6 text-center text-md-left">

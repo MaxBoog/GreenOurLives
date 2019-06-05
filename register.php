@@ -76,10 +76,10 @@ if ($_SESSION["login"] == true) {
 							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Contact</a>
+							<a class="nav-link pr-md-4" href="contact.php">Contact</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Search</a>
+							<a class="nav-link pr-md-4" href="search.php">Zoeken</a>
 						</li>
 						<?php
 						if ($_SESSION["login"] != true) {
@@ -115,9 +115,9 @@ if ($_SESSION["login"] == true) {
 			</div>
 		</section>
 		<div class="container">
-		<form action="" method="post">
+			<form action="" method="post">
 				<div class="form-group">
-					<input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email adres..." />
+					<input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email adres..." autofocus />
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control" name="username" maxlength="32" placeholder="Gebruikersnaam..." />
@@ -128,8 +128,8 @@ if ($_SESSION["login"] == true) {
 				<div class="form-group">
 					<input type="password" class="form-control" name="pwdcheck" placeholder="Bevestig Wachtwoord..." />
 				</div>
-				<input type="submit" name="register" value="Account aanmaken" class="btn btn-CTA-1" />
-				<a class="btn btn-CTA-1" href="register.php">Of meld je aan.</a>
+				<input type="submit" name="register" value="Account aanmaken" class="btn btn-CTA-1 mr-5" />
+				<a class="btn btn-CTA-1" href="login.php">Of log in.</a>
 			</form>
 		<!-- <form action="" method="post">
 			<table>
@@ -207,23 +207,34 @@ if (isset($_POST["register"])) {
 			<div class="row">
 				<div class="col-md-12">
 					<p class="text-center">
-						&copy; Copyright |
-						<a href="greenourlives.com">GreenOurLives.com</a>
+						&copy; <?php echo date("Y"); ?> <a href="">GreenOurLives.com</a>
 					</p>
 				</div>
 				<div class="col-md-6 text-center text-md-left">
 					<hr />
 					<p>
-						<a href="index.php">home</a>
+						<a href="index.php">Home</a>
 					</p>
 					<p>
-						<a href="test.php">doe de test!</a>
+						<a href="test.php">Doe de test!</a>
 					</p>
 					<p>
-						<a href="about.php">over ons & het project</a>
+						<a href="about.php">Over ons & het project</a>
 					</p>
 					<p>
-						<a href="shop.php">beloningen</a>
+						<a href="shop.php">Beloningen</a>
+					</p>
+					<p>
+						<a href="contact.php">Contact</a>
+					</p>
+					<p>
+						<a href="search.php">Search</a>
+					</p>
+					<p>
+						<a href="login.php">Inloggen</a>
+					</p>
+					<p>
+						<a href="register.php">Account aanmaken</a>
 					</p>
 				</div>
 				<div class="col-md-6 text-center text-md-left">
