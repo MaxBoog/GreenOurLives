@@ -30,7 +30,7 @@ if (!isset($_SESSION["login"])) {
 			</p>
 		<![endif]-->
 	<!-- spinner -->
-	<!-- <script>
+	<script>
 		document.querySelector("body").style.display = "none";
 		document.querySelector("html").classList.add("spinner-3");
 
@@ -38,7 +38,7 @@ if (!isset($_SESSION["login"])) {
 			document.querySelector("html").classList.remove("spinner-3");
 			document.querySelector("body").style.display = "block";
 		}, 1000);
-	</script> -->
+	</script>
 	<!-- body -->
 	<button class="btn scrollToTop">
 		<i class="fas fa-angle-up fa-2x"></i>
