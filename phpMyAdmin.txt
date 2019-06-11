@@ -1,6 +1,0 @@
-Info phpMyAdmin
-Control panel: http://www.phpmyadmin.co/
-Username: sql7293177
-Password: URPnwJnuSN
-Database: sql7293177
-Port: 3306
