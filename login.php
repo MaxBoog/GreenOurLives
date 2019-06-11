@@ -49,60 +49,9 @@ if ($_SESSION["login"] == true) {
 	</button>
 	<!-- navigation -->
 	<header>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-			<div class="container">
-				<a class="navbar-brand" href="index.php">Green Our Lives</a>
-				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="icon-bar top-bar"></span>
-					<span class="icon-bar middle-bar"></span>
-					<span class="icon-bar bottom-bar"></span>
-					<span class="sr-only">Toggle navigation</span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link pr-md-4" href="index.php">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="test.php">Doe de test!</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="about.php">Over ons</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="contact.php">Contact</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="search.php">Zoeken</a>
-						</li>
-						<?php
-						if ($_SESSION["login"] != true) {
-							echo '<li class="nav-item">
-									  <a class="nav-link pr-md-4" href="login.php">Inloggen  <i class="fas fa-sign-in-alt"></i></a></li>
-								  <li class="nav-item">
-									  <a class="nav-link pr-md-4" href="register.php">Account aanmaken  <i class="fas fa-user-plus"></i></a>
-								  </li>';
-						}
-						else {
-						echo '<li class="nav-item">
-								  <a class="nav-link pr-md-4" href="profile.php">Profiel</a>
-							  </li>
-							  <li class="nav-item">
-								  <a class="nav-link pr-md-4" href="logout.php">Log uit <i class="fas fa-sign-out-alt"></i></a>
-							  </li><br />';
-						}
-						?>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<?php
+		include("nav.php");
+		?>
 	</header>	
 		<section class="container-fluid">
 		<div class="row">
@@ -125,20 +74,6 @@ if ($_SESSION["login"] == true) {
 				<input type="submit" name="login" value="Inloggen" class="btn btn-CTA-1" />
 				<a class="btn btn-CTA-1" href="register.php" >Of maak een account aan</a>
 			</form>
-		<!-- </form>
-			<form action="" method="post">
-				<table>
-					<tr>
-						<td>Gebruikersnaam</td><td><input type="text" name="username" maxlength="32" /></td>
-					</tr>
-					<tr>
-						<td>Wachtwoord</td><td><input type="password" name="password" maxlength="256"/></td>
-					</tr>
-					<tr>
-						<td><input type="submit" name="login" value="Inloggen" /></td><td></td>
-					</tr>
-				</table>
-			</form><br /> -->
 		</div>
 <?php
 if (isset($_POST["login"])) {

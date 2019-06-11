@@ -5,14 +5,26 @@ html {
 body {
 	padding-top: 10rem;
 	position: relative;
-	font-family: $f-montserrat !important;
+	font-family: $f-main !important;
 	font-weight: 300 !important;
 	line-height: 3.4rem;
 	color: $black;
-	background-image: linear-gradient(to bottom left, white, $white);
 }
 p {
 	font-size: $f-normal;
+}
+
+.header-text {
+	padding: 10rem 0 2rem 0;
+	color: $tertiary-color;
+	font-family: $f-secondary;
+	font-size: $f-bigger;
+}
+
+.header-subtext {
+	padding-bottom: 10rem;
+	color: $tertiary-color;
+	font-family: $f-secondary;
 }
 
 hr {
@@ -28,32 +40,5 @@ a {
 	&:hover {
 		text-decoration: none;
 		color: $quaternary-color;
-	}
-}
-
-// container styles
-
-.cont {
-	background-color: $secondary-color;
-	border-radius: 20px;
-	padding: 2rem;
-	margin-bottom: 1rem;
-}
-
-.marketing .col-md-4 {
-	text-align: center;
-	p {
-		margin-right: 0.75rem;
-		margin-left: 0.75rem;
-	}
-	h2 {
-		font-size: $f-big;
-	}
-}
-
-.featurette {
-	h2 {
-		padding-bottom: 1rem;
-		font-size: $f-bigger;
 	}
 }

@@ -1,13 +1,18 @@
 // styles for smaller screens
 
 @media (max-width: 991px) {
+	.hero {
+		height: calc(100vh - 100px);
+	}
+
 	.cont {
 		max-width: 90vw;
 	}
 
 	hr {
-		margin: 5rem 0;
+		margin: 4rem 0;
 	}
+
 }
 
 // styles for larger screens.
@@ -22,6 +27,14 @@
 		font-size: 80px;
 	}
 	.header-subtext {
+		font-size: 30px;
+		padding-bottom: 10rem;
+	}
+	.hero-text {
+		padding-top: 10rem;
+		font-size: 80px;
+	}
+	.hero-subtext {
 		font-size: 30px;
 		padding-bottom: 10rem;
 	}

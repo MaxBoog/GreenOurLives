@@ -1,13 +1,13 @@
 /* imports */
 
-@import url("https://fonts.googleapis.com/css?family=Changa+One|Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Thambi|Quicksand&display=swap");
 
 /* colors */
 
 $primary-color: #f4f9f4;
-$secondary-color: #aee6bb;
-$tertiary-color: #8aae92;
-$quaternary-color: #616161;
+$secondary-color: #57806C;
+$tertiary-color: #31805A;
+$quaternary-color: #31805A;
 
 /* standard */
 
@@ -27,9 +27,9 @@ $purple: #6c5e81;
 
 /* fonts */
 
-$f-montserrat: "Montserrat", sans-serif;
-$f-changa-one: "Changa One", sans-serif;
-$f-small: 1.1rem;
+$f-main: "Quicksand", sans-serif;
+$f-secondary: "Baloo Thambi", sans-serif;
+$f-small: 1.4rem;
 $f-normal: 2rem;
 $f-big: 2.4rem;
 $f-bigger: 3.2rem;

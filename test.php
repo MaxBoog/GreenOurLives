@@ -45,60 +45,9 @@ if (!isset($_SESSION["login"])) {
 	</button>
 	<!-- navigation -->
 	<header>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-			<div class="container">
-				<a class="navbar-brand" href="index.php">Green Our Lives</a>
-				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="icon-bar top-bar"></span>
-					<span class="icon-bar middle-bar"></span>
-					<span class="icon-bar bottom-bar"></span>
-					<span class="sr-only">Toggle navigation</span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link pr-md-4" href="index.php">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="test.php">Doe de test!</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="about.php">Over ons</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="contact.php">Contact</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="search.php">Zoeken</a>
-						</li>
-						<?php
-						if ($_SESSION["login"] != true) {
-							echo '<li class="nav-item">
-									  <a class="nav-link pr-md-4" href="login.php">Inloggen</a></li>
-								  <li class="nav-item">
-									  <a class="nav-link pr-md-4" href="register.php">Account aanmaken  <i class="fas fa-user-plus"></i></a>
-								  </li>';
-						}
-						else {
-						echo '<li class="nav-item">
-								  <a class="nav-link pr-md-4" href="profile.php">Profiel</a>
-							  </li>
-							  <li class="nav-item">
-								  <a class="nav-link pr-md-4" href="logout.php">Log uit <i class="fas fa-sign-out-alt"></i></a>
-							  </li><br />';
-						}
-						?>
-					</ul>
-				</div>
-			</div>
-		</nav>
+	<?php
+		include("nav.php");
+	?>
 	</header>
 	<section class="container-fluid">
 	<div class="row">
@@ -108,7 +57,7 @@ if (!isset($_SESSION["login"])) {
 		</div>
 		<div class="row">
 
-			<h1 class="header-text mx-auto">Test</h1>
+			<h2 class="header-text mx-auto">Test</h2>
 			<div class="col-sm-12 text-center">
 				<p class="header-subtext">Bereken hier je ecologische voetafdruk</p>
 			</div>
@@ -141,114 +90,119 @@ if (isset($_POST["submit"])) {
 	$points = $q1 + $q2 + $q3 + $q4 + $q5 + $q6 + $q7 + $q8 + $q9 + $q10 + $q11 + $q12 + $q13 + $q14 + $q15 + $q16;
 	echo "<div class='container mx-auto'>
 			<div class='row'>
-			  <h1 class='mx-auto'>Je score is $points punten! </h1>
+			  <h2 class='mx-auto'>Je score is $points punten! </h2>
 			  </row>
 		  </div>";
 }
 else {
 	echo '
 	<div class="container">
-		<form action="" method="post">
-
-			<table id="test">			
-				<tr><th></th><th><h3>1. Met welk vervoersmiddel ga je naar school/werk?</h3></th></tr>
-				<tr><td><input type="radio" name="q1" value="0" /></td><td>Lopen of fiets</td></tr>
-				<tr><td><input type="radio" name="q1" value="1" /></td><td>Openbaar vervoer</td></tr>
-				<tr><td><input type="radio" name="q1" value="3" /></td><td>Auto</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>2. Met welk vervoersmiddel ga je op vakantie?</h3></th></tr>
-				<tr><td><input type="radio" name="q2" value="0" /></td><td>Ik ga niet op vakantie</td></tr>
-				<tr><td><input type="radio" name="q2" value="0" /></td><td>Lopend of fiets</td></tr>
-				<tr><td><input type="radio" name="q2" value="1" /></td><td>Openbaar vervoer</td></tr>
-				<tr><td><input type="radio" name="q2" value="3" /></td><td>Auto</td></tr>
-				<tr><td><input type="radio" name="q2" value="6" /></td><td>Vliegtuig</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>3. Hoeveel kilometers rij je in totaal in een gemiddelde week met de auto?</h3></th></tr>
-				<tr><td><input type="radio" name="q3" value="0" /></td><td>Ik heb geen auto</td></tr>
-				<tr><td><input type="radio" name="q3" value="1" /></td><td>Minder dan 10 km</td></tr>
-				<tr><td><input type="radio" name="q3" value="2" /></td><td>10 tot 25 km</td></tr>
-				<tr><td><input type="radio" name="q3" value="3" /></td><td>25 tot 50 km</td></tr>
-				<tr><td><input type="radio" name="q3" value="4" /></td><td>50 tot 100 km</td></tr>
-				<tr><td><input type="radio" name="q3" value="5" /></td><td>Meer dan 100 km</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>4. Hoe veel dagen per week eet je vlees?</h3></th></tr>
-				<tr><td><input type="radio" name="q4" value="0" /></td><td>0</td></tr>
-				<tr><td><input type="radio" name="q4" value="1" /></td><td>1 of 2</td></tr>
-				<tr><td><input type="radio" name="q4" value="3" /></td><td>3 tot 5</td></tr>
-				<tr><td><input type="radio" name="q4" value="5" /></td><td>6 of vaker</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>5. Eet je wel eens <a href="https://nl.wikipedia.org/wiki/Vleesvervanger" target="_blank">vleesvervangers</a>?</h3></th></tr>
-				<tr><td><input type="radio" name="q5" value="0" /></td><td>Ja</td></tr>
-				<tr><td><input type="radio" name="q5" value="3" /></td><td>Nee</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>6. Hoe goed is je huis geïosoleerd?</h3></th></tr>
-				<tr><td><input type="radio" name="q6" value="0" /></td><td>Goed (dak, muren, vloer)</td></tr>
-				<tr><td><input type="radio" name="q6" value="1" /></td><td>Redelijk (gedeeltelijk)</td></tr>
-				<tr><td><input type="radio" name="q6" value="2" /></td><td>Slecht (nauwelijks)</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>7. Wat voor <a href="https://www.milieucentraal.nl/energie-besparen/energiezuinig-huis/isoleren-en-besparen/dubbel-glas-hr-glas-en-triple-glas/" target="_blank">glas</a> heb in je huis?</h3></th></tr>
-				<tr><td><input type="radio" name="q7" value="3" /></td><td>Enkel</td></tr>
-				<tr><td><input type="radio" name="q7" value="2" /></td><td>Dubbel</td></tr>
-				<tr><td><input type="radio" name="q7" value="1" /></td><td>HR++</td></tr>
-				<tr><td><input type="radio" name="q7" value="0" /></td><td>Triple</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>8. Heb je zonnepanelen op het dak?</h3></th></tr>
-				<tr><td><input type="radio" name="q8" value="0" /></td><td>Ja</td></tr>
-				<tr><td><input type="radio" name="q8" value="2" /></td><td>Nee</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>9. Hoe verwarm je je huis?</h3></th></tr>
-				<tr><td><input type="radio" name="q9" value="5" /></td><td>Gas</td></tr>
-				<tr><td><input type="radio" name="q9" value="4" /></td><td>Houtkachel</td></tr>
-				<tr><td><input type="radio" name="q9" value="3" /></td><td>Stadsverwarming</td></tr>
-				<tr><td><input type="radio" name="q9" value="2" /></td><td>Grijze stroom</td></tr>
-				<tr><td><input type="radio" name="q9" value="1" /></td><td>Groene stroom</td></tr>
-				<tr><td><input type="radio" name="q9" value="0" /></td><td>Warmtepomp</td></tr>
-				<tr><td><input type="radio" name="q9" value="0" /></td><td>Zonneboiler</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>10. Hoe verwarm je je water?</h3></th></tr>
-				<tr><td><input type="radio" name="q10" value="3" /></td><td>Gas</td></tr>
-				<tr><td><input type="radio" name="q10" value="2" /></td><td>Grijze stroom</td></tr>
-				<tr><td><input type="radio" name="q10" value="1" /></td><td>Groene stroom</td></tr>
-				<tr><td><input type="radio" name="q10" value="0" /></td><td>Warmtepomp</td></tr>
-				<tr><td><input type="radio" name="q10" value="0" /></td><td>Zonneboiler</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>11. Wat voor lampen gebruik je het meest in huis?</h3></th></tr>
-				<tr><td><input type="radio" name="q11" value="4" /></td><td>Gloeilampen</td></tr>
-				<tr><td><input type="radio" name="q11" value="3" /></td><td>Halogeenlampen</td></tr>
-				<tr><td><input type="radio" name="q11" value="2" /></td><td>Spaarlampen</td></tr>
-				<tr><td><input type="radio" name="q11" value="1" /></td><td>TL-lampen</td></tr>
-				<tr><td><input type="radio" name="q11" value="0" /></td><td>LED-lampen</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>12. Laat je de stekkers van apparaten met <a href="https://nl.wikipedia.org/wiki/Sluipverbruik" target="_blank">sluipverbruik</a> in het stopcontact zitten?</h3></th></tr>
-				<tr><td><input type="radio" name="q12" value="2" /></td><td>Ja, meerdere</td></tr>
-				<tr><td><input type="radio" name="q12" value="1" /></td><td>Ja, enkele</td></tr>
-				<tr><td><input type="radio" name="q12" value="0" /></td><td>Nee</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>13. Hoe vaak per week laad je je telefoon op?</h3></th></tr>
-				<tr><td><input type="radio" name="q13" value="0" /></td><td>Minder dan 1</td></tr>
-				<tr><td><input type="radio" name="q13" value="1" /></td><td>2 tot 4</td></tr>
-				<tr><td><input type="radio" name="q13" value="2" /></td><td>Meer dan 5</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>14. Welke afvalsoorten scheid je?</h3></th></tr>
-				<tr><td><input type="checkbox" name="q14[]" value="a" /></td><td>Glas</td></tr>
-				<tr><td><input type="checkbox" name="q14[]" value="b" /></td><td>Papier</td></tr>
-				<tr><td><input type="checkbox" name="q14[]" value="c" /></td><td>Plastic of PMD</td></tr>
-				<tr><td><input type="checkbox" name="q14[]" value="d" /></td><td>GFT</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>15. Wat doe je met oude spullen?</h3></th></tr>
-				<tr><td><input type="radio" name="q15" value="0" /></td><td>Verkopen/kringloopwinkel/hergebruiken/recyclen</td></tr>
-				<tr><td><input type="radio" name="q15" value="2" /></td><td>Weggooien</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><th></th><th><h3>16. Hoeveel minuten douche je gemiddeld?</h3></th></tr>
-				<tr><td><input type="radio" name="q16" value="0" /></td><td>Minder dan 5</td></tr>
-				<tr><td><input type="radio" name="q16" value="1" /></td><td>5 tot 10</td></tr>
-				<tr><td><input type="radio" name="q16" value="2" /></td><td>10 tot 15</td></tr>
-				<tr><td><input type="radio" name="q16" value="3" /></td><td>15 tot 20</td></tr>
-				<tr><td><input type="radio" name="q16" value="4" /></td><td>Meer dan 20</td></tr>
-				<tr><td></td><td><hr /></td></tr>
-				<tr><td></td><td><input type="submit" name="submit" value="Bereken je uitslag" /></td></tr>
-				</table>
-		</form><br />
+		<div class="row">
+			<div class="col-sm-10 offset-sm-2">
+				<form action="" method="post">
+					
+						<table id="test">			
+							<tr><th></th><th><h2>1. Met welk vervoersmiddel ga je naar school/werk?</h2></th></tr>
+							<tr><td><input type="radio" name="q1" value="0" class="question"/></td><td>Lopen of fiets</td></tr>
+							<tr><td><input type="radio" name="q1" value="1" /></td><td>Openbaar vervoer</td></tr>
+							<tr><td><input type="radio" name="q1" value="3" /></td><td>Auto</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>2. Met welk vervoersmiddel ga je op vakantie?</h2></th></tr>
+							<tr><td><input type="radio" name="q2" value="0" /></td><td>Ik ga niet op vakantie</td></tr>
+							<tr><td><input type="radio" name="q2" value="0" /></td><td>Lopend of fiets</td></tr>
+							<tr><td><input type="radio" name="q2" value="1" /></td><td>Openbaar vervoer</td></tr>
+							<tr><td><input type="radio" name="q2" value="3" /></td><td>Auto</td></tr>
+							<tr><td><input type="radio" name="q2" value="6" /></td><td>Vliegtuig</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>3. Hoeveel kilometers rij je in totaal in een gemiddelde week met de auto?</h2></th></tr>
+							<tr><td><input type="radio" name="q3" value="0" /></td><td>Ik heb geen auto</td></tr>
+							<tr><td><input type="radio" name="q3" value="1" /></td><td>Minder dan 10 km</td></tr>
+							<tr><td><input type="radio" name="q3" value="2" /></td><td>10 tot 25 km</td></tr>
+							<tr><td><input type="radio" name="q3" value="3" /></td><td>25 tot 50 km</td></tr>
+							<tr><td><input type="radio" name="q3" value="4" /></td><td>50 tot 100 km</td></tr>
+							<tr><td><input type="radio" name="q3" value="5" /></td><td>Meer dan 100 km</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>4. Hoe veel dagen per week eet je vlees?</h2></th></tr>
+							<tr><td><input type="radio" name="q4" value="0" /></td><td>0</td></tr>
+							<tr><td><input type="radio" name="q4" value="1" /></td><td>1 of 2</td></tr>
+							<tr><td><input type="radio" name="q4" value="3" /></td><td>3 tot 5</td></tr>
+							<tr><td><input type="radio" name="q4" value="5" /></td><td>6 of vaker</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>5. Eet je wel eens <a href="https://nl.wikipedia.org/wiki/Vleesvervanger" target="_blank">vleesvervangers</a>?</h2></th></tr>
+							<tr><td><input type="radio" name="q5" value="0" /></td><td>Ja</td></tr>
+							<tr><td><input type="radio" name="q5" value="3" /></td><td>Nee</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>6. Hoe goed is je huis geïosoleerd?</h2></th></tr>
+							<tr><td><input type="radio" name="q6" value="0" /></td><td>Goed (dak, muren, vloer)</td></tr>
+							<tr><td><input type="radio" name="q6" value="1" /></td><td>Redelijk (gedeeltelijk)</td></tr>
+							<tr><td><input type="radio" name="q6" value="2" /></td><td>Slecht (nauwelijks)</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>7. Wat voor <a href="https://www.milieucentraal.nl/energie-besparen/energiezuinig-huis/isoleren-en-besparen/dubbel-glas-hr-glas-en-triple-glas/" target="_blank">glas</a> heb in je huis?</h2></th></tr>
+							<tr><td><input type="radio" name="q7" value="3" /></td><td>Enkel</td></tr>
+							<tr><td><input type="radio" name="q7" value="2" /></td><td>Dubbel</td></tr>
+							<tr><td><input type="radio" name="q7" value="1" /></td><td>HR++</td></tr>
+							<tr><td><input type="radio" name="q7" value="0" /></td><td>Triple</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>8. Heb je zonnepanelen op het dak?</h2></th></tr>
+							<tr><td><input type="radio" name="q8" value="0" /></td><td>Ja</td></tr>
+							<tr><td><input type="radio" name="q8" value="2" /></td><td>Nee</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>9. Hoe verwarm je je huis?</h2></th></tr>
+							<tr><td><input type="radio" name="q9" value="5" /></td><td>Gas</td></tr>
+							<tr><td><input type="radio" name="q9" value="4" /></td><td>Houtkachel</td></tr>
+							<tr><td><input type="radio" name="q9" value="3" /></td><td>Stadsverwarming</td></tr>
+							<tr><td><input type="radio" name="q9" value="2" /></td><td>Grijze stroom</td></tr>
+							<tr><td><input type="radio" name="q9" value="1" /></td><td>Groene stroom</td></tr>
+							<tr><td><input type="radio" name="q9" value="0" /></td><td>Warmtepomp</td></tr>
+							<tr><td><input type="radio" name="q9" value="0" /></td><td>Zonneboiler</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>10. Hoe verwarm je je water?</h2></th></tr>
+							<tr><td><input type="radio" name="q10" value="3" /></td><td>Gas</td></tr>
+							<tr><td><input type="radio" name="q10" value="2" /></td><td>Grijze stroom</td></tr>
+							<tr><td><input type="radio" name="q10" value="1" /></td><td>Groene stroom</td></tr>
+							<tr><td><input type="radio" name="q10" value="0" /></td><td>Warmtepomp</td></tr>
+							<tr><td><input type="radio" name="q10" value="0" /></td><td>Zonneboiler</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>11. Wat voor lampen gebruik je het meest in huis?</h2></th></tr>
+							<tr><td><input type="radio" name="q11" value="4" /></td><td>Gloeilampen</td></tr>
+							<tr><td><input type="radio" name="q11" value="3" /></td><td>Halogeenlampen</td></tr>
+							<tr><td><input type="radio" name="q11" value="2" /></td><td>Spaarlampen</td></tr>
+							<tr><td><input type="radio" name="q11" value="1" /></td><td>TL-lampen</td></tr>
+							<tr><td><input type="radio" name="q11" value="0" /></td><td>LED-lampen</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>12. Laat je de stekkers van apparaten met <a href="https://nl.wikipedia.org/wiki/Sluipverbruik" target="_blank">sluipverbruik</a> in het stopcontact zitten?</h2></th></tr>
+							<tr><td><input type="radio" name="q12" value="2" /></td><td>Ja, meerdere</td></tr>
+							<tr><td><input type="radio" name="q12" value="1" /></td><td>Ja, enkele</td></tr>
+							<tr><td><input type="radio" name="q12" value="0" /></td><td>Nee</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>13. Hoe vaak per week laad je je telefoon op?</h2></th></tr>
+							<tr><td><input type="radio" name="q13" value="0" /></td><td>Minder dan 1</td></tr>
+							<tr><td><input type="radio" name="q13" value="1" /></td><td>2 tot 4</td></tr>
+							<tr><td><input type="radio" name="q13" value="2" /></td><td>Meer dan 5</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>14. Welke afvalsoorten scheid je?</h2></th></tr>
+							<tr><td><input type="checkbox" name="q14[]" value="a" /></td><td>Glas</td></tr>
+							<tr><td><input type="checkbox" name="q14[]" value="b" /></td><td>Papier</td></tr>
+							<tr><td><input type="checkbox" name="q14[]" value="c" /></td><td>Plastic of PMD</td></tr>
+							<tr><td><input type="checkbox" name="q14[]" value="d" /></td><td>GFT</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>15. Wat doe je met oude spullen?</h2></th></tr>
+							<tr><td><input type="radio" name="q15" value="0" /></td><td>Verkopen/kringloopwinkel/hergebruiken/recyclen</td></tr>
+							<tr><td><input type="radio" name="q15" value="2" /></td><td>Weggooien</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><th></th><th><h2>16. Hoeveel minuten douche je gemiddeld?</h2></th></tr>
+							<tr><td><input type="radio" name="q16" value="0" /></td><td>Minder dan 5</td></tr>
+							<tr><td><input type="radio" name="q16" value="1" /></td><td>5 tot 10</td></tr>
+							<tr><td><input type="radio" name="q16" value="2" /></td><td>10 tot 15</td></tr>
+							<tr><td><input type="radio" name="q16" value="3" /></td><td>15 tot 20</td></tr>
+							<tr><td><input type="radio" name="q16" value="4" /></td><td>Meer dan 20</td></tr>
+							<tr><td></td><td><hr /></td></tr>
+							<tr><td></td><td><input type="submit" name="submit" value="Bereken je uitslag" /></td></tr>
+							</table>
+						
+				</form><br />
+			</div>
+		</div>
 	</div>	
 	';
 }

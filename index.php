@@ -30,7 +30,7 @@ if (!isset($_SESSION["login"])) {
 			</p>
 		<![endif]-->
 	<!-- spinner -->
-	<script>
+	<!-- <script>
 		document.querySelector("body").style.display = "none";
 		document.querySelector("html").classList.add("spinner-3");
 
@@ -38,85 +38,29 @@ if (!isset($_SESSION["login"])) {
 			document.querySelector("html").classList.remove("spinner-3");
 			document.querySelector("body").style.display = "block";
 		}, 1000);
-	</script>
+	</script> -->
 	<!-- body -->
 	<button class="btn scrollToTop">
 		<i class="fas fa-angle-up fa-2x"></i>
 	</button>
 	<!-- navigation -->
 	<header>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-			<div class="container">
-				<a class="navbar-brand" href="index.php">Green Our Lives</a>
-				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="icon-bar top-bar"></span>
-					<span class="icon-bar middle-bar"></span>
-					<span class="icon-bar bottom-bar"></span>
-					<span class="sr-only">Toggle navigation</span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link pr-md-4" href="index.php">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="test.php">Doe de test!</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="about.php">Over ons</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="contact.php">Contact</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="search.php">Zoeken</a>
-						</li>
-						<?php
-						if ($_SESSION["login"] != true) {
-							echo '<li class="nav-item">
-									  <a class="nav-link pr-md-4" href="login.php">Inloggen <i class="fas fa-sign-in-alt"></i></a></li>
-								  <li class="nav-item">
-									  <a class="nav-link pr-md-4" href="register.php">Account aanmaken <i class="fas fa-user-plus"></i></a>
-								  </li>';
-						}
-						else {
-						echo '<li class="nav-item">
-								  <a class="nav-link pr-md-4" href="profile.php">Profiel</a>
-							  </li>
-							  <li class="nav-item">
-								  <a class="nav-link pr-md-4" href="logout.php">Log uit <i class="fas fa-sign-out-alt"></i></a>
-							  </li><br />';
-						}
-						?>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<?php
+		include("nav.php");
+		?>
 	</header>
-	<section class="container-fluid">
-		<div class="row">
-			<?php if ($_SESSION["login"] == true) {
-				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
-			}?>
-		</div>
-		<div class="row">
-		
-			
-			<h1 class="header-text mx-auto">Green Our Lives</h1>
-			<div class="col-sm-12 text-center">
-				<p class="header-subtext">Bekijk hoe jij bij kan dragen aan een groenere toekomst!</p>
-				<a href="test.php" class="btn btn-CTA-1">Doe de test!</a>
+	<section class="hero text-center">
+		<div class="container">
+			<div class="row">
+				<div class="col content">
+					<h1 class="hero-text">Green Our Lives</h1>
+					<p class="hero-subtext">Bekijk hoe jij bij kan dragen aan een groenere toekomst!</p>
+					<a href="test.php" class="btn btn-CTA-1 mx-auto">Doe de test!</a>
+				</div>
 			</div>
 		</div>
 	</section>
-	<main role="main">
+
 		<!-- footer -->
 		<footer class="container">
 			<div class="row">
@@ -166,7 +110,6 @@ if (!isset($_SESSION["login"])) {
 				</div>
 			</div>
 		</footer>
-	</main>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

@@ -26,67 +26,17 @@ if ($_SESSION["login"] != true) {
 		<link rel="stylesheet" type="text/css" href="assets/css/master.min.css" />
 	</head>
 	<body>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-			<div class="container">
-				<a class="navbar-brand" href="index.php">Green Our Lives</a>
-				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="icon-bar top-bar"></span>
-					<span class="icon-bar middle-bar"></span>
-					<span class="icon-bar bottom-bar"></span>
-					<span class="sr-only">Toggle navigation</span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link pr-md-4" href="index.php">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="test.php">Doe de test!</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="about.php">Over ons</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="contact.php">Contact</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="search.php">Zoeken</a>
-						</li>
-						<?php
-						if ($_SESSION["login"] != true) {
-							echo '<li class="nav-item">
-									  <a class="nav-link pr-md-4" href="login.php">Inloggen  <i class="fas fa-sign-in-alt"></i></a></li>
-								  <li class="nav-item">
-									  <a class="nav-link pr-md-4" href="register.php">Account aanmaken  <i class="fas fa-user-plus"></i></a>
-								  </li>';
-						}
-						else {
-						echo '<li class="nav-item">
-								  <a class="nav-link pr-md-4" href="profile.php">Profiel</a>
-							  </li>
-							  <li class="nav-item">
-								  <a class="nav-link pr-md-4" href="logout.php">Log uit</a>
-							  </li><br />';
-						}
-						?>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<?php
+			include("nav.php");
+		?>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
 					<h1>Profiel</h1><br />
 					<h2>Profiel van <?php echo $_SESSION["username"]; ?></h2>
-					#comment: some data goes here...
 					<h1>Instellingen</h1><br />
+					<h3><?php echo "Je level is xp / iets!
+					Je hebt ook points punten, waarmee je leuke dingen kan doen!"; ?></h3><br />
 					<h3>Wachtwoord wijzigen</h3>
 					<form action="" method="post">
 						<table>

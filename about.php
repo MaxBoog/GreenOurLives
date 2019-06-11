@@ -45,60 +45,9 @@ if (!isset($_SESSION["login"])) {
 	</button>
 	<!-- navigation -->
 	<header>
-		<nav class="navbar navbar-expand-lg fixed-top navbar-custom">
-			<div class="container">
-				<a class="navbar-brand" href="index.php">Green Our Lives</a>
-				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-					data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span class="icon-bar top-bar"></span>
-					<span class="icon-bar middle-bar"></span>
-					<span class="icon-bar bottom-bar"></span>
-					<span class="sr-only">Toggle navigation</span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarResponsive">
-					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
-							<a class="nav-link pr-md-4" href="index.php">Home
-								<span class="sr-only">(current)</span>
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="test.php">Doe de test!</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="about.php">Over ons</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Beloningen</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="contact.php">Contact</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="search.php">Zoeken</a>
-						</li>
-						<?php
-						if ($_SESSION["login"] != true) {
-							echo '<li class="nav-item">
-									  <a class="nav-link pr-md-4" href="login.php">Inloggen  <i class="fas fa-sign-in-alt"></i></a></li>
-								  <li class="nav-item">
-									  <a class="nav-link pr-md-4" href="register.php">Account aanmaken  <i class="fas fa-user-plus"></i></a>
-								  </li>';
-						}
-						else {
-						echo '<li class="nav-item">
-								  <a class="nav-link pr-md-4" href="profile.php">Profiel</a>
-							  </li>
-							  <li class="nav-item">
-								  <a class="nav-link pr-md-4" href="logout.php">Log uit <i class="fas fa-sign-out-alt"></i></a>
-							  </li><br />';
-						}
-						?>
-					</ul>
-				</div>
-			</div>
-		</nav>
+		<?php
+		include("nav.php");
+		?>
 	</header>
 	<section class="container-fluid">
 	<div class="row">
