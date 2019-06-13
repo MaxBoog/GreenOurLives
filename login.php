@@ -71,8 +71,8 @@ if ($_SESSION["login"] == true) {
 				<div class="form-group">
 					<input type="password" class="form-control" name="password" placeholder="Wachtwoord..." />
 				</div>
-				<input type="submit" name="login" value="Inloggen" class="btn btn-CTA-1" />
-				<a class="btn btn-CTA-1" href="register.php" >Of maak een account aan</a>
+				<input type="submit" name="login" value="Log in" class="btn btn-CTA-2" />
+				<a class="btn btn-CTA-3 ml-sm-4" href="register.php" >Meld je aan</a>
 			</form>
 		</div>
 <?php
@@ -104,54 +104,9 @@ if (isset($_POST["login"])) {
 	}
 }
 ?>
-		<footer class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<p class="text-center">
-						&copy; <?php echo date("Y"); ?> <a href="">GreenOurLives.com</a>
-					</p>
-				</div>
-				<div class="col-md-6 text-center text-md-left">
-					<hr />
-					<p>
-						<a href="index.php">Home</a>
-					</p>
-					<p>
-						<a href="test.php">Doe de test!</a>
-					</p>
-					<p>
-						<a href="about.php">Over ons & het project</a>
-					</p>
-					<p>
-						<a href="shop.php">Beloningen</a>
-					</p>
-					<p>
-						<a href="contact.php">Contact</a>
-					</p>
-					<p>
-						<a href="search.php">Search</a>
-					</p>
-					<p>
-						<a href="login.php">Inloggen</a>
-					</p>
-					<p>
-						<a href="register.php">Account aanmaken</a>
-					</p>
-				</div>
-				<div class="col-md-6 text-center text-md-left">
-					<hr />
-					<a href="#" target="_blank" class="pr-4">
-						<i class="fab fa-facebook-f fa-3x"></i>
-					</a>
-					<a href="#" target="_blank" class="pr-4">
-						<i class="fab fa-instagram fa-3x"></i>
-					</a>
-					<a href="mailto:info@greenourlives.com">
-						<i class="far fa-envelope fa-3x"></i>
-					</a>
-				</div>
-			</div>
-		</footer>
+		<?php
+			include("footer.php");
+		?>
 	</main>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

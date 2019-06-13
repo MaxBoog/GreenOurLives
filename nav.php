@@ -29,7 +29,16 @@
 							<a class="nav-link pr-md-4" href="contact.php">Contact  <i class="fas fa-shopping-basket"></i></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="search.php">Zoeken  <i class="fas fa-search"></i></a>
+							
+							<a class="nav-link dropdown-toggle" href="search.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+							Zoeken  <i class="fas fa-search"></i>
+							</a>
+							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+								<form class="form-inline my-2 my-lg-0">
+									<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+									<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+								</form>
+							</div>
 						</li>
 						<?php
 						if ($_SESSION["login"] != true) {

@@ -4,11 +4,11 @@
 
 .navbar-custom {
 	background-color: $white;
-	border-bottom: 2px solid $brown;
+	border-bottom: 2px solid $blue;
 	padding: 3rem !important;
 	transition: all 0.4s ease;
 	.navbar-brand {
-		color: $tertiary-color;
+		color: $blue;
 		font-family: $f-secondary;
 		font-size: $f-bigger;
 		transition: 0.2s;

@@ -49,17 +49,10 @@
 	}
 }
 
-// form send button
-
-.btn-send {
-	@extend .btn-CTA-1;
-	cursor: pointer;
-}
-
 // secondary Call to Action button
 
 .btn-CTA-2 {
-	background-color: $white;
+	background-color: transparent;
 	border: 5px solid $blue !important;
 	transition: 0.3s;
 	font-size: $f-normal;
@@ -80,6 +73,23 @@
 		background-color: $blue !important;
 		border-color: $blue !important;
 		box-shadow: none !important;
+	}
+}
+
+.btn-CTA-3 {
+	@extend .btn-CTA-2;
+	border: none !important;
+	&:hover {
+		color: $quaternary-color  !important;
+		background-color: transparent  !important;
+	}
+	&:active {
+		color: $quaternary-color  !important;
+		background-color: transparent !important;	
+	}
+	&:focus {
+		color: $quaternary-color  !important;
+		background-color: transparent  !important;
 	}
 }
 
