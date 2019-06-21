@@ -291,7 +291,8 @@ td {
   .navbar-custom .nav-item.active .nav-link {
     color: #0e1013; }
   .navbar-custom .nav-item:hover .nav-link {
-    color: #004D4D; }
+    color: #004D4D;
+    background-color: transparent !important; }
   .navbar-custom .dropdown-menu {
     background-color: #fbfbfb;
     border-radius: 0;

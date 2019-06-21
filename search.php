@@ -3,6 +3,7 @@ session_start();
 if (!isset($_SESSION["login"])) {
 	$_SESSION["login"] = false;
 }
+error_reporting(E_ALL & ~E_NOTICE);
 ?>
 <!DOCTYPE html>
 <html lang="nl-NL">
@@ -29,15 +30,16 @@ if (!isset($_SESSION["login"])) {
 				your experience and security.
 			</p>
 		<![endif]-->
+	<noscript>Schakel JavaScript in om de website optimaal te kunnen gebruiken. 
+	<a href="https://www.browserchecker.nl/javascript-aanzetten" target="_blank">Hoe kan ik JavaScript inschakelen?</a></noscript>
 	<!-- spinner -->
 	<script>
 		document.querySelector("body").style.display = "none";
 		document.querySelector("html").classList.add("spinner-3");
-
 		setTimeout(function () {
 			document.querySelector("html").classList.remove("spinner-3");
 			document.querySelector("body").style.display = "block";
-		}, 1000);
+		}, 800);
 	</script>
 	<!-- body -->
 	<button class="btn scrollToTop">
@@ -49,41 +51,48 @@ if (!isset($_SESSION["login"])) {
 		include("nav.php");
 		?>
 	</header>
-	<section class="hero text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col content">
-					<h1 class="hero-text">Zoeken</h1>
+	<section class="container-fluid">
+	<div class="row">
+			<?php if ($_SESSION["login"] == true) {
+				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
+			}?>
+		</div>
+		<div class="row">
+			<h1 class="header-text mx-auto">Zoeken</h1>
+			<div class="col-sm-12 text-center">
+			<form action="" method="get">
+				<input type="text" name="q" maxlength="255" autofocus />
+				<input type="submit" value="Zoeken" />
+			</form>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
 	$q = strip_tags(addslashes($_GET["q"]));
 	if (!empty($q)) {
-		$connect = mysqli_connect("db4free.net", "greenourlives", "TomTom11", "greenourlives") or die ("Verbinding met de database mislukt!");
-		$query = mysqli_query($connect, "SELECT result FROM search WHERE result LIKE '%$q%';");
+		include("connect.php");
+		$query = mysqli_query($connect, "SELECT result FROM search WHERE result LIKE '%$q%';") or die ("Zoekresultaten ophalen mislukt!");
 		if (mysqli_num_rows($query) > 0) {
 			while ($row = mysqli_fetch_assoc($query)) {
 				$result = $row["result"];
-				echo "Zoekresultaten voor " . $result;
+				echo "Zoekresultaten voor ".$q.":<br />";
+				echo $result;
 			}
 		}
 		else {
-			echo "Er zijn geen resultaten voor " . $q;
+			echo "Er zijn geen resultaten voor ".$q;
 		}
+		mysqli_close($connect);
 	}
-	else {
-		echo "Je hebt geen zoekterm ingevuld!";
-		}
 }
 ?>
-				</div>
 			</div>
 		</div>
 	</section>
-
+	<main role="main">
 		<!-- footer -->
 		<?php
-			include("footer.php");
+			include("footer.php")
 		?>
+	</main>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

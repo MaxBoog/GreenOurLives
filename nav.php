@@ -1,3 +1,18 @@
+<?php
+function CurrentPage($page) {
+	if ($page == $current) {
+		echo 'class="current"';
+	}
+}
+?>
+<style>
+.pr-md-4:hover {
+	background-color: #ddd;
+}
+.pr-md-4:active {
+	background-color: #ccc;
+}
+</style>
 <nav class="navbar navbar-expand-xl fixed-top navbar-custom">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="index.php">Green Our Lives</a>
@@ -12,33 +27,24 @@
 				<div class="collapse navbar-collapse" id="navbarResponsive">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link pr-md-4" href="index.php">Home <i class="fas fa-home"></i> 
+							<a class="nav-link pr-md-4 " href="index.php">Home <i class="fas fa-home"></i> 
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="test.php">Doe de test! <i class="fas fa-pen-square"></i></a>
+							<a class="nav-link pr-md-4 " href="test.php">Doe de test! <i class="fas fa-pen-square"></i></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="about.php">Over ons  <i class="fas fa-info-circle"></i></a>
+							<a class="nav-link pr-md-4 " href="shop.php">Beloningen  <i class="fas fa-shopping-basket"></i></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="shop.php">Beloningen  <i class="fas fa-shopping-basket"></i></a>
+							<a class="nav-link pr-md-4 " href="about.php">Over ons  <i class="fas fa-info-circle"></i></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4" href="contact.php">Contact  <i class="fas fa-shopping-basket"></i></a>
+							<a class="nav-link pr-md-4 " href="contact.php">Contact  <i class="fas fa-shopping-basket"></i></a>
 						</li>
 						<li class="nav-item">
-							
-							<a class="nav-link dropdown-toggle" href="search.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-							Zoeken  <i class="fas fa-search"></i>
-							</a>
-							<div class="dropdown-menu" aria-labelledby="navbarDropdown">
-								<form class="form-inline my-2 my-lg-0">
-									<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-									<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-								</form>
-							</div>
+							<a class="nav-link pr-md-4 " href="search.php">Zoeken  <i class="fas fa-search"></i></a>
 						</li>
 						<?php
 						if ($_SESSION["login"] != true) {
@@ -49,12 +55,12 @@
 								  </li>';
 						}
 						else {
-						echo '<li class="nav-item">
+							echo '<li class="nav-item">
 								  <a class="nav-link pr-md-4" href="profile.php">Profiel <i class="fas fa-user"></i></a>
-							  </li>
-							  <li class="nav-item">
-								  <a class="nav-link pr-md-4" href="logout.php">Log uit <i class="fas fa-sign-out-alt"></i></a>
-							  </li><br />';
+								</li>
+								<li class="nav-item">
+									<a class="nav-link pr-md-4" href="logout.php">Log uit <i class="fas fa-sign-out-alt"></i></a>
+								</li><br />';
 						}
 						?>
 					</ul>

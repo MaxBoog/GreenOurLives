@@ -38,7 +38,7 @@ if (!isset($_SESSION["login"])) {
 		setTimeout(function () {
 			document.querySelector("html").classList.remove("spinner-3");
 			document.querySelector("body").style.display = "block";
-		}, 1000);
+		}, 800);
 	</script>
 	<!-- body -->
 	<button class="btn scrollToTop">
@@ -50,48 +50,68 @@ if (!isset($_SESSION["login"])) {
 		include("nav.php");
 		?>
 	</header>
-	<section class="hero text-center">
-		<div class="container">
-			<div class="row">
-				<div class="col content">
-					<h1 class="hero-text">Green Our Lives</h1>
-					<p class="hero-subtext">Bekijk hoe jij bij kan dragen aan een groenere toekomst!</p>
-					<a href="test.php" class="btn btn-CTA-1 mx-auto">Doe de test!</a>
-				</div>
+	<section class="container-fluid">
+	<div class="row">
+			<?php if ($_SESSION["login"] == true) {
+				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
+			}?>
+		</div>
+		<div class="row">
+			<h1 class="header-text mx-auto">Wachtwoord vergeten?</h1>
+			<div class="col-sm-12 text-center">
+				<p class="header-subtext">Vul hieronder je e-mailadres in:</p>
+				<form action="" method="post">
+					<input type="text" name="email" maxlength="64" />
+					<input type="submit" name="reset" value="Wachtwoord resetten" autofocus />
+				</form>
+				<?php
+				if (isset($_POST["reset"])) {
+					$email = strip_tags(addslashes($_POST["email"]));
+					if (!empty($email)) {
+						if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+							$dbemail = base64_encode($email);
+							include("connect.php");
+							$selectmail = mysqli_query($connect, "SELECT username, email FROM users WHERE email = '$dbemail';") or die ("Opvragen emailadressen uit de database mislukt!");
+							if (mysqli_num_rows($selectmail) > 0) {
+								while ($row = mysqli_fetch_assoc($selectmail)) {
+									$username = base64_decode($row["username"]);
+								}
+								$token = uniqid("", true);
+								$link = "https://www.students.science.uu.nl/~6469175/goal/resetpassword.php?token=".$token;
+								$time = strtotime("now");
+								$insert = mysqli_query($connect, "INSERT INTO tokens VALUES ('', '$email', '$token', '$time');") or die ("Data opslaan mislukt!");
+								mail($email, "Wachtwoord resetten", "Beste $username,<br /><br />
+								Er is een verzoek gedaan om je wachtwoord te resetten.<br /><br />
+								Als je dit niet hebt gedaan kun je deze email negeren.<br /><br />
+								Als je je wachtwoord wilt resetten, klik dan op de volgende link:<br/ >
+								$link <br /><br />
+								Deze link is een uur geldig.<br /></br />
+								Met vriendelijke groet<br /><br />
+								Green Our Lives");
+							}
+							else {
+								echo "Dit emailadres is niet bij ons bekend!";
+							}
+							mysqli_close($connect);
+						}
+						else {
+							echo "Dit emailadres is ongeldig!";
+						}
+					}
+					else {
+						echo "Vul je emailadres in!";
+					}
+				}
+				?>
 			</div>
 		</div>
 	</section>
-
-	<section class="container pt-5">
-		<div class="row">
-			<div class="col-sm-6">
-				<img src="assets/img/environment.svg" class="img-fluid" alt="Green Our Lives">
-			</div>
-			<div class="col-sm-6">
-				<p>
-					De voetafdruk (ook wel mondiale of ecologische voetafdruk genoemd) is de ruimte die we per persoon innemen op aarde. 
-					Deze ruimte wordt berekend op basis van jouw levensstijl. Alles wat je consumeert kost namelijk ruimte. 
-					Eten en drinken neemt bijvoorbeeld ruimte in beslag, omdat het verbouwd en vervoerd moet worden. 
-					Maar ook papiergebruik (denk aan bomenkap) en energieverbruik (CO2 uitstoot) kosten veel ruimte.</p>
-			</div>	
-		</div>
-		<hr>
-		<div class="row">
-			<div class="col-sm-6">
-				<p>
-					Deze voetafdruktest brengt in kaart welke impact jouw persoonlijke levensstijl heeft op onze aarde. 
-					Aan het eind van de test krijg je tips om je voetafdruk te verkleinen en kun je XP verdienen waarmee je allerlei ecologische kortingen kunt ontvangen!
-				</p>
-			</div>
-			<div class="col-sm-6">
-				<img src="#" class="img-fluid" alt="Green Our Lives">
-			</div>
-		</div>
-	</section>
+	<main role="main">
 		<!-- footer -->
 		<?php
 			include("footer.php")
 		?>
+	</main>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
 		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"

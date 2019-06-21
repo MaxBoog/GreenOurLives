@@ -34,11 +34,12 @@ if ($_SESSION["login"] == true) {
 				your experience and security.
 			</p>
 		<![endif]-->
+	<noscript>Schakel JavaScript in om de website optimaal te kunnen gebruiken. 
+	<a href="https://www.browserchecker.nl/javascript-aanzetten" target="_blank">Hoe kan ik JavaScript inschakelen?</a></noscript>
 	<!-- spinner -->
 	<script>
 		document.querySelector("body").style.display = "none";
 		document.querySelector("html").classList.add("spinner-3");
-
 		setTimeout(function () {
 			document.querySelector("html").classList.remove("spinner-3");
 			document.querySelector("body").style.display = "block";
@@ -56,8 +57,7 @@ if ($_SESSION["login"] == true) {
 		<section class="container-fluid">
 		<div class="row">
 			<?php if ($_SESSION["login"] == true) {
-				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
-			}?>
+				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';}?>
 		</div>
 			<div class="row">
 				<h1 class="header-text mx-auto">Inloggen</h1>
@@ -71,8 +71,9 @@ if ($_SESSION["login"] == true) {
 				<div class="form-group">
 					<input type="password" class="form-control" name="password" placeholder="Wachtwoord..." />
 				</div>
-				<input type="submit" name="login" value="Log in" class="btn btn-CTA-2" />
-				<a class="btn btn-CTA-3 ml-sm-4" href="register.php" >Meld je aan</a>
+				<input type="submit" name="login" value="Inloggen" class="btn btn-CTA-1" />
+				<a class="btn btn-CTA-1" href="register.php" >Of maak een account aan</a>
+				<a class="btn btn-CTA-1" href="lostpassword.php" >Wachtwoord vergeten?</a>
 			</form>
 		</div>
 <?php
@@ -84,14 +85,14 @@ if (isset($_POST["login"])) {
 	if (!empty($username && $password)) {
 		$username = base64_encode($username);
 		$password = md5(md5(sha1(sha1($password))));
-		$connect = mysqli_connect("sql7.freemysqlhosting.net", "sql7293177", "URPnwJnuSN", "sql7293177") or die ("Verbinding met de database mislukt!");
+		include("connect.php");
 		$select = "SELECT username, password FROM users WHERE username = '$username' AND password = '$password';";
 		$query = mysqli_query($connect, $select) or die ("Opvragen aanmeldingsgegevens uit de database mislukt!");
 		if (mysqli_num_rows($query) > 0) {
 			while ($row = mysqli_fetch_assoc($query)) {
 				$_SESSION["login"] = true;
 				$_SESSION["username"] = base64_decode($row["username"]);
-				echo '<script>window.location.href="index.php";</script>';
+				echo '<script>window.location.href="profile.php";</script>';
 			}
 		}
 		else {
@@ -105,7 +106,7 @@ if (isset($_POST["login"])) {
 }
 ?>
 		<?php
-			include("footer.php");
+			include("footer.php")
 		?>
 	</main>
 	<script src="assets/js/jquery.min.js"></script>

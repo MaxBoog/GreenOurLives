@@ -57,44 +57,72 @@ if (!isset($_SESSION["login"])) {
 			}?>
 		</div>
 		<div class="row">
-			<h1 class="header-text mx-auto">Contact</h1>
+			<h1 class="header-text mx-auto">Wachtwoord resetten</h1>
 			<div class="col-sm-12 text-center">
-<?php
-if (isset($_POST["contact"])) {
-	$name = strip_tags(addslashes($_POST["name"]));
-	$email = strip_tags(addslashes($_POST["email"]));
-	$subject = $_POST["subject"];
-	$message = strip_tags(addslashes(nl2br($_POST["message"])));
-	if (!empty($name && $email && $message)) {
-		if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-			$message = $email."<br />".$message;
-			mail("greenourlives@mailinator.com", $subject, $message) or die ("Bericht versturen mislukt!");
-			echo "Uw bericht is verzonden. We nemen zo snel mogelijk contact met u op.";
-		}
-		else {
-			echo "Dit emailadres is ongeldig!";
-		}
-	}
-	else {
-		echo "Je hebt niet alle velden ingevuld!";
-	}
-}
-else {
-	echo '<p class="hero-subtext">Vul het onderstaande contactformulier in:</p>
-			<form action="" method="post">
-				<input type="text" name="name" placeholder="Naam" maxlength="64" autofocus /><br />
-				<input type="text" name="email" placeholder="Emailadres" maxlength="64" /><br />
-				<select name="subject">
-					<option value="vraag" selected>Vraag</option>
-					<option value="opmerking">Opmerking</option>
-					<option value="klacht">Klacht</option>
-					<option value="overig">Overig</option>
-				</select><br />
-				<textarea name="message" placeholder="Bericht"></textarea><br />
-				<input type="submit" name="contact" value="Bericht versturen" /><br />
-			</form>';
-}
-?>
+				<form action="" method="post">
+					<input type="password" name="password" maxlength="64" autofocus />
+					<input type="password" name="checkpwd" maxlength="64" />
+					<input type="submit" name="resetpwd" value="Wachtwoord resetten" />
+				</form>
+				<?php
+				if ($_SERVER["REQUEST_METHOD"] == "GET") {
+					$token = strip_tags(addslashes($_GET["token"]));
+					if (!empty($token)) {
+						include("connect.php");
+						$selecttoken = mysqli_query($connect, "SELECT token, time FROM tokens WHERE token='$token';") or die ("Opvragen tokens uit database mislukt!");
+						if (mysqli_num_rows($selecttoken) > 0) {
+							while ($row = mysqli_fetch_assoc($selecttoken)) {
+								$email = $row["email"];
+								$dbtoken = $row["token"];
+								$dbtime = $row["time"];
+								if ($token == $dbtoken) {
+									$time = strtotime("now");
+									if ($time - $dbtime < 6400) {
+										echo '<form action="" method="post">
+											<input type="password" name="password" placeholder="Wachtwoord" maxlength=255 autofocus />
+											<input type="password" name="checkpwd" placeholder="Bevestig wachtwoord" maxlength="255" />
+											<input type="submit" name="resetpwd" value="Wachtwoord ressetten" />
+										</form>';
+									}
+									else {
+										echo "Deze link is verlopen!";
+										mysqli_query($connect, "DELETE FROM tokens WHERE token='$token';") or die ("Opschonen van de database mislukt!");
+									}
+								}
+								else {
+									echo "Deze link is ongeldig!";
+								}
+							}
+						}
+						else {
+							echo "Deze link is ongeldig!";
+						}
+						mysqli_close($connect);
+					}
+					else {
+						echo "Deze link is ongeldig!";
+					}
+				}
+				if (isset($_POST["resetpwd"])) {
+					$password = strip_tags(addslashes($_POST["password"]));
+					$checkpwd = strip_tags(addslashes($_POST["checkpwd"]));
+					if (!empty($password && $checkpwd)) {
+						if ($password == $checpwd) {
+							include("connect.php");
+							$setpwd = mysqli_query($connect, "UPDATE users SET password WHERE email='$email'") or die ("Invoeren nieuw wachtwoord mislukt!");
+							echo "Wachtwoord succesvol gereset!";
+							mysqli_query($connect, "DELETE FROM tokens WHERE token='$token';") or die ("Opschonen van de database mislukt!");
+							mysqli_close($connect);
+						}
+						else {
+							echo "De wachtwoorden komen niet overeen!";
+						}
+					}
+					else {
+						echo "Vul alle velden in!";
+					}
+				}
+				?>
 			</div>
 		</div>
 	</section>

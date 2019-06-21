@@ -26,6 +26,8 @@ if ($_SESSION["login"] != true) {
 		<link rel="stylesheet" type="text/css" href="assets/css/master.min.css" />
 	</head>
 	<body>
+	<noscript>Schakel JavaScript in om de website optimaal te kunnen gebruiken. 
+	<a href="https://www.browserchecker.nl/javascript-aanzetten" target="_blank">Hoe kan ik JavaScript inschakelen?</a></noscript>
 		<?php
 			include("nav.php");
 		?>
@@ -63,7 +65,7 @@ if (isset($_POST["changepwd"])) {
 				$oldpwd = md5(md5(sha1(sha1($oldpwd))));
 				$newpwd = md5(md5(sha1(sha1($newpwd))));
 				$checkpwd = "";
-				$connect = mysqli_connect("sql7.freemysqlhosting.net", "sql7293177", "URPnwJnuSN", "sql7293177") or die ("Verbinding met de database mislukt!");
+				include("connect.php");
 				$username = base64_encode($_SESSION["username"]);
 				$selectpwd = mysqli_query($connect, "SELECT password FROM users WHERE username = '$username' AND password = '$oldpwd';") or die ("Controleren van het oude wachtwoord mislukt!" . mysqli_error($connect));
 				if (mysqli_num_rows($selectpwd) > 0) {
@@ -94,7 +96,7 @@ if (isset($_POST["changepwd"])) {
 }
 ?>
 		<?php
-			include("footer.php");
+			include("footer.php")
 		?>
 	</main>
 	<script src="assets/js/jquery.min.js"></script>

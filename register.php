@@ -33,11 +33,12 @@ if ($_SESSION["login"] == true) {
 				your experience and security.
 			</p>
 		<![endif]-->
+	<noscript>Schakel JavaScript in om de website optimaal te kunnen gebruiken. 
+	<a href="https://www.browserchecker.nl/javascript-aanzetten" target="_blank">Hoe kan ik JavaScript inschakelen?</a></noscript>
 	<!-- spinner -->
 	<script>
 		document.querySelector("body").style.display = "none";
 		document.querySelector("html").classList.add("spinner-3");
-
 		setTimeout(function () {
 			document.querySelector("html").classList.remove("spinner-3");
 			document.querySelector("body").style.display = "block";
@@ -67,7 +68,7 @@ if ($_SESSION["login"] == true) {
 		<div class="container">
 			<form action="" method="post">
 				<div class="form-group">
-					<input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Email adres..." autofocus />
+					<input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Emailadres..." autofocus />
 				</div>
 				<div class="form-group">
 					<input type="text" class="form-control" name="username" maxlength="32" placeholder="Gebruikersnaam..." />
@@ -78,8 +79,8 @@ if ($_SESSION["login"] == true) {
 				<div class="form-group">
 					<input type="password" class="form-control" name="pwdcheck" placeholder="Bevestig Wachtwoord..." />
 				</div>
-				<input type="submit" name="register" value="Account aanmaken" class="btn btn-CTA-2" />
-				<a class="btn btn-CTA-3 ml-4" href="login.php">Log in</a>
+				<input type="submit" name="register" value="Account aanmaken" class="btn btn-CTA-1" />
+				<a class="btn btn-CTA-1" href="login.php">Of meld je aan.</a>
 			</form>
 		</div>
 <?php
@@ -100,12 +101,12 @@ if (isset($_POST["register"])) {
 					$username = base64_encode($username);
 					$password = md5(md5(sha1(sha1($password))));
 					$pwdcheck = "";
-					$connect = mysqli_connect("sql7.freemysqlhosting.net", "sql7293177", "URPnwJnuSN", "sql7293177") or die ("Verbinding met de database mislukt!");
+					include("connect.php");
 					$selectmail = mysqli_query($connect, "SELECT email FROM users WHERE email = '$email';") or die ("Opvragen emailadressen uit de database mislukt!");
 					if (mysqli_num_rows($selectmail) == 0) {
 						$selectusername = mysqli_query($connect, "SELECT username FROM users WHERE username = '$username';") or die ("Opvragen gebruikersnamen uit de database mislukt!");
 						if (mysqli_num_rows($selectusername) == 0) {
-							mysqli_query($connect, "INSERT INTO users VALUES ('', '$email', '$username', '$password');") or die ("Aanmaken van het account mislukt!");
+							mysqli_query($connect, "INSERT INTO users VALUES ('', '$email', '$username', '$password', '0', '0');") or die ("Aanmaken van het account mislukt!");
 							echo "Account succesvol aangemaakt! <a href='login.php'>Ga naar de inlogpagina</a>.";
 						}
 						else {
@@ -135,7 +136,7 @@ if (isset($_POST["register"])) {
 }
 ?>
 		<?php
-			include("footer.php");
+			include("footer.php")
 		?>
 	</main>
 	<script src="assets/js/jquery.min.js"></script>

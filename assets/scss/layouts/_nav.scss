@@ -26,6 +26,7 @@
 	}
 	.nav-item:hover .nav-link {
 		color: $quaternary-color;
+		background-color: transparent !important;
 	}
 	.dropdown-menu {
 		background-color: $white;
