@@ -34,18 +34,17 @@ if ($_SESSION["login"] != true) {
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1>Profiel</h1><br />
+					<h1 class="header-text">Profielpagina</h1><br />
 					<h2>Profiel van <?php echo $_SESSION["username"]; ?></h2>
 					<h1>Instellingen</h1><br />
-					<h3><?php echo "Je level is xp / iets!
-					Je hebt ook points punten, waarmee je leuke dingen kan doen!"; ?></h3><br />
+					
 					<h3>Wachtwoord wijzigen</h3>
 					<form action="" method="post">
 						<table>
 							<tr><td>Oud wachtwoord</td><td><input type="password" name="oldpwd" maxlength="256"/></td></tr>
 							<tr><td>Nieuw wachtwoord</td><td><input type="password" name="newpwd" maxlength="256"/></td></tr>
 							<tr><td>Bevestig wachtwoord</td><td><input type="password" name="checkpwd" maxlength="256"/></td></tr>
-							<tr><td><input type="submit" name="changepwd" value="Wachtwoord wijzigen" /></td><td></td></tr>
+							<tr><td><input type="submit" class="btn btn-CTA-2" name="changepwd" value="Wachtwoord wijzigen" /></td><td></td></tr>
 						</table>
 					</form><br />
 				</div>

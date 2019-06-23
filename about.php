@@ -59,7 +59,7 @@ if (!isset($_SESSION["login"])) {
 		<div class="row">
 			<h1 class="header-text mx-auto">Over Ons & Het Project</h1>
 			<div class="col-sm-12">
-				<p class="header-subtext">Lees hier meer over wie wij zijn en wat wij doen.</p>
+				<p class="header-subtext text-center">Lees hier meer over wie wij zijn en wat wij doen.</p>
 
 				<p>Green Our Lives is geboren uit een project die wij, Max Boog, Jesse Borghardt, Govert Hagelaar, Martijn Jansen, Jorrit Lenssinck, Jenny Lin en William de Rooij, uit moesten voeren voor het Informatiekunde introductieproject van de bachelor Informatiekunde aan de Universiteit Utrecht. 
 				Gezamenlijk zijn wij aan de gang gegaan met dit project, waarbij wij in een periode van ongeveer twee maanden een geheel werkend systeem moeten ontwikkelen, waarbij we de gedachte “designing for social goods” in ons achterhoofd moeten houden. 
