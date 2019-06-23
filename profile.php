@@ -70,28 +70,65 @@ if (isset($_POST["changepwd"])) {
 				$selectpwd = mysqli_query($connect, "SELECT password FROM users WHERE username = '$username' AND password = '$oldpwd';") or die ("Controleren van het oude wachtwoord mislukt!" . mysqli_error($connect));
 				if (mysqli_num_rows($selectpwd) > 0) {
 					if ($oldpwd == $newpwd) {
-						echo "Het nieuwe wachtwoord mag niet hetzelfde zijn als het oude!";
+						echo "<div class'container'>
+									<div class='row'>
+										<div class='col-sm-12 text-center'>
+											<p>Het nieuwe wachtwoord mag niet hetzelfde zijn als het oude!</p>
+										</div>
+									</div>
+								</div>					
+							";
 					}
 					else {
 						mysqli_query($connect, "UPDATE users SET password = '$newpwd' WHERE username = '$username' AND password = '$oldpwd';") or die ("Veranderen van het wachtwoord is mislukt!");
-						echo "Wachtwoord succesvol gewijzigd!";
+						echo "<div class'container'>
+						<div class='row'>
+							<div class='col-sm-12 text-center'>
+								<p>Wachtwoord succesvol gewijzigd!</p>
+							</div>
+						</div>
+					</div>";
 					}
 				}
 				else {
-					echo "Het oude wachtwoord is niet correct!";
+					echo "<div class'container'>
+					<div class='row'>
+						<div class='col-sm-12 text-center'>
+							<p>Het oude wachtwoord is niet correct!</p>
+						</div>
+					</div>
+				</div>";
 				}
 				mysqli_close($connect);
 			}
 			else {
-				echo "Het wachtwoord moet minimaal 12 tekens lang zijn!";
+				echo "<div class'container'>
+				<div class='row'>
+					<div class='col-sm-12 text-center'>
+						<p>Het wachtwoord moet minimaal 12 tekens lang zijn!</p>
+					</div>
+				</div>
+			</div>";
 			}
 		}
 		else {
-			echo "De nieuwe wachtwoorden komen niet overeen!";
+			echo "<div class'container'>
+			<div class='row'>
+				<div class='col-sm-12 text-center'>
+					<p>De nieuwe wachtwoorden komen niet overeen!</p>
+				</div>
+			</div>
+		</div>";
 		}
 	}
 	else {
-		echo "Je hebt niet alle velden ingevuld!";
+		echo "<div class'container'>
+		<div class='row'>
+			<div class='col-sm-12 text-center'>
+				<p>Je hebt niet alle velden ingevuld!</p>
+			</div>
+		</div>
+	</div>";
 	}
 }
 ?>

@@ -69,14 +69,32 @@ if (isset($_POST["contact"])) {
 		if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			$message = $email."<br />".$message;
 			mail("greenourlives@mailinator.com", $subject, $message) or die ("Bericht versturen mislukt!");
-			echo "Uw bericht is verzonden. We nemen zo snel mogelijk contact met u op.";
+			echo "		<div class'container'>
+									<div class='row'>
+										<div class='col-sm-12 text-center'>
+											<p>Uw bericht is verzonden. We nemen zo snel mogelijk contact met u op!</p>
+										</div>
+									</div>
+								</div>";
 		}
 		else {
-			echo "Dit emailadres is ongeldig!";
+			echo "<div class'container'>
+			<div class='row'>
+				<div class='col-sm-12 text-center'>
+					<p>Dit e-mailadres is ongeldig! <a href='contact.php'>Terug <i class='fas fa-arrow-right'></i></a></p>
+				</div>
+			</div>
+		</div>";
 		}
 	}
 	else {
-		echo "Je hebt niet alle velden ingevuld!";
+		echo "<div class'container'>
+		<div class='row'>
+			<div class='col-sm-12 text-center'>
+			<p>Je hebt niet alle velden ingevuld! <a href='contact.php'>Terug <i class='fas fa-arrow-right'></i></a></p>;
+			</div>
+		</div>
+	</div>";
 	}
 }
 else {
@@ -91,7 +109,7 @@ else {
 					<option value="overig">Overig</option>
 				</select><br />
 				<textarea name="message" placeholder="Bericht"></textarea><br />
-				<input type="submit" name="contact" value="Bericht versturen" /><br />
+				<input type="submit" class"btn btn-CTA-2" name="contact" value="Bericht versturen" /><br />
 			</form>';
 }
 ?>

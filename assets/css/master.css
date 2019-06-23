@@ -46,6 +46,9 @@ a {
     text-decoration: none;
     color: #004D4D; }
 
+li {
+  font-size: 2rem; }
+
 /* MODULES - Individual site components */
 .btn {
   font-size: 2rem;
@@ -89,7 +92,7 @@ a {
 
 .btn-CTA-2, .btn-CTA-3 {
   background-color: transparent;
-  border: 5px solid #16738f !important;
+  border: 4px solid #16738f !important;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -199,6 +202,9 @@ a {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg); } }
 
+.fa-chevron-down {
+  color: #fbfbfb; }
+
 .short-icon {
   margin: 2.5rem 0;
   color: #6c5e81; }
@@ -264,6 +270,17 @@ td {
 
 .custom-control-label {
   font-size: 2rem; }
+
+.error-text {
+  padding: 2rem;
+  color: #FF5555; }
+
+.error-message {
+  color: #FF5555; }
+
+.points {
+  padding: 2rem;
+  border-radius: 3px; }
 
 /* LAYOUTS - Page layout styles */
 .navbar-custom {

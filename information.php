@@ -50,7 +50,7 @@ if (!isset($_SESSION["login"])) {
 		include("nav.php");
 		?>
 	</header>
-	<section class="container-fluid">
+	<section class="container">
 	<div class="row">
 			<?php if ($_SESSION["login"] == true) {
 				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
@@ -58,32 +58,42 @@ if (!isset($_SESSION["login"])) {
 		</div>
 		<div class="row">
 			<h1 class="header-text mx-auto">Meer informatie</h1>
-			<div class="col-sm-12 text-center">
+			<div class="col-sm-12">
 				<p class="header-subtext">Hoe zit het nou precies met de ecologische voetafdruk? Vindt het hier uit!</p>
 				<p>De Aarde produceert alles wat we nodig hebben om ons in onze voedsel-, energie- en andere levensbehoeften te voorzien. 
 				Voor de productie en afvalverwerking hiervan is ruimte nodig. 
 				De ecologische voetafdruk geeft inzicht in de hoeveelheid land (mondiale hectares) die jaarlijks nodig is voor onze consumptie. 
 				De grootte van je voetafdruk hangt dus af van je leefgewoonten.</p>
-				<h2>Waar komt het begrip “voetafdruk” vandaan?</h2>
+				<hr>
+			</div>
+			<div class="col-lg-6">
+				<img src="assets/img/walking.svg" class="img-fluid" alt="Green Our Lives">
+			</div>
+
+			<div class="col-lg-6">
+				<h2 class="header-subtext pb-4">Waar komt het begrip “voetafdruk” vandaan?</h2>
 				<p>Het begrip “ecologische voetafdruk” bestaat al ruim 15 jaar en werd geïntroduceerd aan de Canadese Universiteit van British Colombia door Mathis Wackernagel. 
 				De ecologische voetafdruk is een soort meetinstrument waarmee het ruimtebeslag van een mens aan de hand van iemand levenswijze op de Aarde bepaald kan worden. 
 				De ruimte die iemands levenswijze inneemt wordt uitgedrukt in hectares. Hoe groot deze voetafdruk is hangt met name af van het consumptiegedrag. 
 				De berekening neemt onder andere de oppervlakte mee welke nodig is voor het gebruik van energie en grondstoffen en de productie van voedsel. </p>
-				<h2>Leven op een te grote voet</h2>
+			</div>
+			<div class="col-sm-12">
+				<h2  class="header-subtext pb-4">Leven op een te grote voet</h2>
 				<p>Per mens is op basis van een eerlijke verdeling hectare op de wereld beschikbaar. 
 				Wereldwijd gebruiken we nu per mens zo ongeveer 2,7 hectare. Een gemiddelde Nederlander gebruikt zelfs 6,2 hectare, veel te veel dus! 
 				Op dit moment hebben we ongeveer anderhalve Aarde nodig om te produceren wat we in één jaar nodig zouden hebben. 
 				We vragen dus meer van onze Aarde dan wat deze ons te bieden heeft. 
 				Hierdoor komen ook de natuur en het ecosysteem onder druk te staan en erven volgende generaties een Aarde die steeds minder leefbaar wordt.</p>
-				<h2>Je voetafdruk en CO2</h2>
+				<h2   class="header-subtext pb-4">Je voetafdruk en CO2</h2>
 				<p>Het broeikasgas koolstofdioxide (CO2) beslaat maar liefst de helft van de ecologische voetafdruk. 
 				Het gas komt vrij bij verbranding van fossiele brandstoffen zoals aardolie, gas en steenkool, bijvoorbeeld voor elektriciteitsopwekking, verwarming en vervoer. CO2 draagt bij aan de opwarming van de Aarde en klimaatverandering. 
 				Gelukkig zijn bomen in staat om CO2 uit de lucht te halen en op te slaan. Daarmee leveren ze een belangrijke bijdrage aan het tegengaan van klimaatverandering. Je CO2-uitstoot wordt doorberekend in je ecologische voetafdruk door uit te rekenen hoeveel hectare bos er nodig is om je CO2 weer uit de lucht te halen.</p>
-				<h2>Het Eerlijke Aarde-aandeel</h2>
+				<h2   class="header-subtext pb-4">Het Eerlijke Aarde-aandeel</h2>
 				<p>Als alle bruikbare ruimte op Aarde verdeeld wordt over alle mensen en de natuur voldoende ruimte krijgt om zichzelf te herstellen, dan zou elke bewoner gemiddeld recht hebben op zo’n 1,8 hectare per persoon. 
 				Het Living Planet Report van 2010 geeft de volgende cijfers (die betrekking hebben op 2007) voor de gemiddelde voetafdruk per inwoner per continent en per land. 
 				Hier zijn enkele cijfers om een idee te geven hoe de ecologische voetafdruk verdeeld is over de wereld:</p>
 				<p>Wil je er zelf iets aan doen? <a href="challenges.php">Bekijk dan eens de challenges!</a></p>
+			</div>
 			</div>
 		</div>
 	</section>

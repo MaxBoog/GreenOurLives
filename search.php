@@ -62,7 +62,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 			<div class="col-sm-12 text-center">
 			<form action="" method="get">
 				<input type="text" name="q" maxlength="255" autofocus />
-				<input type="submit" value="Zoeken" />
+				<input type="submit" class="btn btn-CTA-2" value="Zoeken" />
 			</form>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
@@ -78,7 +78,13 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 			}
 		}
 		else {
-			echo "Er zijn geen resultaten voor ".$q;
+			echo "<div class'container'>
+			<div class='row'>
+				<div class='col-sm-12 text-center'>
+					<p>Er zijn geen resultaten voor: </p>
+				</div>
+			</div>
+		</div>".$q;
 		}
 		mysqli_close($connect);
 	}

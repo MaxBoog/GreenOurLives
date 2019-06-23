@@ -79,8 +79,8 @@ if ($_SESSION["login"] == true) {
 				<div class="form-group">
 					<input type="password" class="form-control" name="pwdcheck" placeholder="Bevestig Wachtwoord..." />
 				</div>
-				<input type="submit" name="register" value="Account aanmaken" class="btn btn-CTA-1" />
-				<a class="btn btn-CTA-1" href="login.php">Of meld je aan.</a>
+				<input type="submit" name="register" value="Account aanmaken" class="btn btn-CTA-2" />
+				<a class="btn btn-CTA-3" href="login.php">Of log in <i class="fas fa-sign-in-alt"></i></a>
 			</form>
 		</div>
 <?php
@@ -107,31 +107,74 @@ if (isset($_POST["register"])) {
 						$selectusername = mysqli_query($connect, "SELECT username FROM users WHERE username = '$username';") or die ("Opvragen gebruikersnamen uit de database mislukt!");
 						if (mysqli_num_rows($selectusername) == 0) {
 							mysqli_query($connect, "INSERT INTO users VALUES ('', '$email', '$username', '$password', '0', '0');") or die ("Aanmaken van het account mislukt!");
-							echo "Account succesvol aangemaakt! <a href='login.php'>Ga naar de inlogpagina</a>.";
+							echo "
+							<div class'container'>
+								<div class='row'>
+									<div class='col-sm-12 text-center'>
+										<p class='error-text'>Account succesvol aangemaakt! <a href='Ga naar de inlogpagina <i class='fas fa-external-link-alt'></a>!</p>
+									</div>
+								</div>
+							</div>";
 						}
 						else {
-							echo "Deze gebruikersnaam is al in gebruik!";
+							echo "<div class'container'>
+							<div class='row'>
+								<div class='col-sm-12 text-center'>
+									<p class='error-text'>Deze gebruikersnaam is al in gebruik!</p>
+								</div>
+							</div>
+						</div>";
 						}
 					}
 					else {
-						echo "Dit emailadres is al in gebruik!";
+						echo "<div class'container'>
+						<div class='row'>
+							<div class='col-sm-12 text-center'>
+								<p class='error-text'>Dit e-mailadres is al in gebruik!</p>
+							</div>
+						</div>
+					</div>";
 					}
 					mysqli_close($connect);
 				}
 				else {
-					echo "Het wachtwoord moet minimaal 12 tekens lang zijn!";
+					echo "<div class'container'>
+					<div class='row'>
+						<div class='col-sm-12 text-center'>
+							<p class='error-text'>Het wachtwoord moet minimaal 12 tekens lang zijn!</p>
+						</div>
+					</div>
+				</div>";
 				}
 			}
 			else {
-				echo "De wachtwoorden komen niet overeen!";
+				echo "<div class'container'>
+				<div class='row'>
+					<div class='col-sm-12 text-center'>
+						<p class='error-text'>De wachtwoorden komen niet overeen!</p>
+					</div>
+				</div>
+			</div>";
 			}
 		}
 		else {
-			echo "Dit emailadres is ongeldig!";
+			echo "<div class'container'>
+			<div class='row'>
+				<div class='col-sm-12 text-center'>
+					<p class='error-text'>Dit e-mailadres is ongeldig!</p>
+				</div>
+			</div>
+		</div>";
 		}
 	}
 	else {
-		echo "Je hebt niet alle velden ingevuld!";
+		echo "<div class'container'>
+		<div class='row'>
+			<div class='col-sm-12 text-center'>
+				<p class='error-text'>U heeft niet alle velden ingevuld!</p>
+			</div>
+		</div>
+	</div>";
 	}
 }
 ?>

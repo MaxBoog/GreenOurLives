@@ -64,17 +64,21 @@ if ($_SESSION["login"] == true) {
 			</div>
 		</section>
 		<div class="container">
-			<form action="" method="post">
-				<div class="form-group">
-					<input type="text" class="form-control" name="username" maxlength="32" placeholder="Gebruikersnaam..." autofocus />
+			<div class="row">
+				<div class="col-sm-8 offset-sm-2">
+					<form action="" method="post">
+						<div class="form-group">
+							<input type="text" class="form-control mb-5" name="username" maxlength="32" placeholder="Gebruikersnaam..." autofocus />
+						</div>
+						<div class="form-group">
+							<input type="password" class="form-control mb-5" name="password" placeholder="Wachtwoord..." />
+						</div>
+						<input type="submit" name="login" value="Log in" class="btn btn-CTA-2 pr-3" />
+						<a class="btn btn-CTA-3 pr-3" href="register.php" >Of maak een account aan</a>
+						<a class="btn btn-CTA-3 mt-5 mt-lg-0" href="lostpassword.php" >Wachtwoord vergeten?</a>
+					</form>
 				</div>
-				<div class="form-group">
-					<input type="password" class="form-control" name="password" placeholder="Wachtwoord..." />
-				</div>
-				<input type="submit" name="login" value="Inloggen" class="btn btn-CTA-1" />
-				<a class="btn btn-CTA-1" href="register.php" >Of maak een account aan</a>
-				<a class="btn btn-CTA-1" href="lostpassword.php" >Wachtwoord vergeten?</a>
-			</form>
+			</div>
 		</div>
 <?php
 if (isset($_POST["login"])) {
@@ -96,12 +100,24 @@ if (isset($_POST["login"])) {
 			}
 		}
 		else {
-			echo "Gebruikersnaam en wachtwoord komen niet overeen!";
+			echo "<div class'container'>
+			<div class='row'>
+				<div class='col-sm-12 text-center'>
+					<p>Gebruikersnaam en wachtwoord komen niet overeen!</p>
+				</div>
+			</div>
+		</div>";
 		}
 		mysqli_close($connect);
 	}
 	else {
-		echo "Je hebt niet alle velden ingevuld!";
+		echo "<div class'container'>
+		<div class='row'>
+			<div class='col-sm-12 text-center'>
+				<p>Je hebt niet alle velden ingevuld!</p>
+			</div>
+		</div>
+	</div>";
 	}
 }
 ?>

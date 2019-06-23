@@ -49,3 +49,17 @@ td {
 .custom-control-label {
 	font-size: $f-normal;
 }
+
+.error-text {
+	padding: 2rem;
+	color: $red-error;
+}
+
+.error-message {
+	color: $red-error;
+}
+
+.points {
+	padding: 2rem;
+	border-radius: 3px;
+}

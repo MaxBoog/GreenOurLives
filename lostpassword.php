@@ -62,7 +62,7 @@ if (!isset($_SESSION["login"])) {
 				<p class="header-subtext">Vul hieronder je e-mailadres in:</p>
 				<form action="" method="post">
 					<input type="text" name="email" maxlength="64" />
-					<input type="submit" name="reset" value="Wachtwoord resetten" autofocus />
+					<input type="submit" class="btn btn-CTA-2" name="reset" value="Wachtwoord resetten" autofocus />
 				</form>
 				<?php
 				if (isset($_POST["reset"])) {
@@ -90,16 +90,34 @@ if (!isset($_SESSION["login"])) {
 								Green Our Lives");
 							}
 							else {
-								echo "Dit emailadres is niet bij ons bekend!";
+								echo "<div class'container'>
+								<div class='row'>
+									<div class='col-sm-12 text-center'>
+										<p class='error-text'>Dit e-mailadres is niet bij ons bekend!</p>
+									</div>
+								</div>
+							</div>";
 							}
 							mysqli_close($connect);
 						}
 						else {
-							echo "Dit emailadres is ongeldig!";
+							echo "<div class'container'>
+							<div class='row'>
+								<div class='col-sm-12 text-center'>
+									<p class='error-text'>Dit e-mailadres is ongeldig!</p>
+								</div>
+							</div>
+						</div>";
 						}
 					}
 					else {
-						echo "Vul je emailadres in!";
+						echo "<div class'container'>
+						<div class='row'>
+							<div class='col-sm-12 text-center'>
+								<p>Vul je e-mailadres in!</p>
+							</div>
+						</div>
+					</div>";
 					}
 				}
 				?>

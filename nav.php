@@ -35,13 +35,10 @@ function CurrentPage($page) {
 							<a class="nav-link pr-md-4 " href="test.php">Doe de test! <i class="fas fa-pen-square"></i></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4 " href="shop.php">Beloningen  <i class="fas fa-shopping-basket"></i></a>
-						</li>
-						<li class="nav-item">
 							<a class="nav-link pr-md-4 " href="about.php">Over ons  <i class="fas fa-info-circle"></i></a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link pr-md-4 " href="contact.php">Contact  <i class="fas fa-shopping-basket"></i></a>
+							<a class="nav-link pr-md-4 " href="contact.php">Contact  <i class="fas fa-envelope"></i></a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link pr-md-4 " href="search.php">Zoeken  <i class="fas fa-search"></i></a>

@@ -57,34 +57,37 @@ if (!isset($_SESSION["login"])) {
 					<h1 class="hero-text">Green Our Lives</h1>
 					<p class="hero-subtext">Bekijk hoe jij bij kan dragen aan een groenere toekomst!</p>
 					<a href="test.php" class="btn btn-CTA-1 mx-auto">Doe de test!</a>
+					<p class="hero-subtext pb-1 pt-5">of lees meer</p>
+					<p><a href="#down"><i class="fas fa-chevron-down"></i></a></p>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	<section class="container pt-5">
+		
+	<section class="container pt-5" id="down">
 		<div class="row">
+			<div class="col-sm-6">
+				<h1 class="pb-5"><strong>Wat is een ecologische voetafdruk?</strong></h1>
+				<p>
+					De voetafdruk, ook wel mondiale of ecologische voetafdruk genoemd, is de ruimte die we per persoon innemen op aarde. 
+					Deze ruimte wordt berekend op basis van jouw levensstijl. Alles wat je consumeert kost namelijk ruimte. 
+					Eten en drinken neemt bijvoorbeeld ruimte in beslag, omdat het verbouwd en vervoerd moet worden. 
+					Maar ook papiergebruik, denk aan bomenkap, en energieverbruik (CO2 uitstoot) kosten veel ruimte.</p>
+			</div>	
 			<div class="col-sm-6">
 				<img src="assets/img/environment.svg" class="img-fluid" alt="Green Our Lives">
 			</div>
-			<div class="col-sm-6">
-				<p>
-					De voetafdruk (ook wel mondiale of ecologische voetafdruk genoemd) is de ruimte die we per persoon innemen op aarde. 
-					Deze ruimte wordt berekend op basis van jouw levensstijl. Alles wat je consumeert kost namelijk ruimte. 
-					Eten en drinken neemt bijvoorbeeld ruimte in beslag, omdat het verbouwd en vervoerd moet worden. 
-					Maar ook papiergebruik (denk aan bomenkap) en energieverbruik (CO2 uitstoot) kosten veel ruimte.</p>
-			</div>	
 		</div>
 		<hr>
 		<div class="row">
+			<div class="col-sm-6 order-last order-md-first">
+				<img src="assets/img/park.svg" class="img-fluid" alt="Green Our Lives">
+			</div>
 			<div class="col-sm-6">
 				<p>
 					Deze voetafdruktest brengt in kaart welke impact jouw persoonlijke levensstijl heeft op onze aarde. 
 					Aan het eind van de test krijg je tips om je voetafdruk te verkleinen en kun je XP verdienen waarmee je allerlei ecologische kortingen kunt ontvangen!
 				</p>
-			</div>
-			<div class="col-sm-6">
-				<img src="#" class="img-fluid" alt="Green Our Lives">
 			</div>
 		</div>
 	</section>

@@ -14,10 +14,7 @@
 						<a href="test.php">Doe de test!</a>
 					</p>
 					<p>
-						<a href="about.php">Over ons & het project</a>
-					</p>
-					<p>
-						<a href="shop.php">Beloningen</a>
+						<a href="about.php">Over ons</a>
 					</p>
 					<p>
 						<a href="contact.php">Contact</a>
