@@ -34,17 +34,17 @@ if ($_SESSION["login"] != true) {
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1 class="header-text">Profielpagina</h1><br />
-					<h2>Profiel van <?php echo $_SESSION["username"]; ?></h2>
-					<h1>Instellingen</h1><br />
+					<h1 class="header-text mx-auto pt-5 pb-2">Profielpagina</h1><br />
+					<h2>Je bent ingelogd als <?php echo $_SESSION["username"]; ?></h2>
+					<h1 class="pt-5">Instellingen</h1><br />
 					
-					<h3>Wachtwoord wijzigen</h3>
+					<h2 class="pt-5 pb-5">Wachtwoord wijzigen</h2>
 					<form action="" method="post">
 						<table>
 							<tr><td>Oud wachtwoord</td><td><input type="password" name="oldpwd" maxlength="256"/></td></tr>
 							<tr><td>Nieuw wachtwoord</td><td><input type="password" name="newpwd" maxlength="256"/></td></tr>
 							<tr><td>Bevestig wachtwoord</td><td><input type="password" name="checkpwd" maxlength="256"/></td></tr>
-							<tr><td><input type="submit" class="btn btn-CTA-2" name="changepwd" value="Wachtwoord wijzigen" /></td><td></td></tr>
+							<tr><td><input type="submit" class="btn btn-CTA-2 pt-5" name="changepwd" value="Wachtwoord wijzigen" /></td><td></td></tr>
 						</table>
 					</form><br />
 				</div>

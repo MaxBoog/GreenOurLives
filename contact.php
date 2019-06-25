@@ -98,7 +98,7 @@ if (isset($_POST["contact"])) {
 	}
 }
 else {
-	echo '<p class="header-text">Vul het onderstaande contactformulier in:</p>
+	echo '<p class="header-subtext">Vul het onderstaande contactformulier in:</p>
 			<form action="" method="post">
 				<input type="text" name="name" placeholder="Naam" maxlength="64" autofocus /><br />
 				<input type="text" name="email" placeholder="Emailadres" maxlength="64" /><br />

@@ -439,7 +439,8 @@ footer {
 
 @media (max-width: 991px) {
   .hero {
-    height: calc(100vh - 100px); }
+    height: calc(100vh - 50px);
+    background-attachment: scroll; }
   .cont {
     max-width: 90vw; }
   hr {
