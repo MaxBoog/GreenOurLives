@@ -53,7 +53,7 @@ if ($_SESSION["login"] == true) {
 		include("nav.php");
 		?>
 	</header>
-		<section class="container-fluid">
+		<section class="container">
 		<div class="row">
 			<?php if ($_SESSION["login"] == true) {
 				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
@@ -65,7 +65,7 @@ if ($_SESSION["login"] == true) {
 				</div>
 			</div>
 		</section>
-		<div class="container">
+		<div class="container cont">
 			<form action="" method="post">
 				<div class="form-group">
 					<input type="email" class="form-control" id="exampleInputEmail1" name="email" placeholder="Emailadres..." autofocus />
@@ -111,7 +111,7 @@ if (isset($_POST["register"])) {
 							<div class'container'>
 								<div class='row'>
 									<div class='col-sm-12 text-center'>
-										<p class='error-text'>Account succesvol aangemaakt! <a href='Ga naar de inlogpagina <i class='fas fa-external-link-alt'></a>!</p>
+										<p>Account succesvol aangemaakt! <a href='Ga naar de inlogpagina <i class='fas fa-external-link-alt'></a>!</p>
 									</div>
 								</div>
 							</div>";

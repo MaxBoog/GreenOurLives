@@ -51,7 +51,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 		include("nav.php");
 		?>
 	</header>
-	<section class="container-fluid">
+	<section class="container cont">
 	<div class="row">
 			<?php if ($_SESSION["login"] == true) {
 				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';

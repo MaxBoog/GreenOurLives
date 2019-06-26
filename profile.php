@@ -31,20 +31,30 @@ if ($_SESSION["login"] != true) {
 		<?php
 			include("nav.php");
 		?>
-		<div class="container">
+		<div class="container cont">
 			<div class="row">
 				<div class="col-sm-12">
-					<h1 class="header-text mx-auto pt-5 pb-2">Profielpagina</h1><br />
+					<h1 class="header-text mx-auto">Profielpagina</h1><br />
 					<h2>Je bent ingelogd als <?php echo $_SESSION["username"]; ?></h2>
-					<h1 class="pt-5">Instellingen</h1><br />
-					
-					<h2 class="pt-5 pb-5">Wachtwoord wijzigen</h2>
+					<h1 class="header-subtext pt-5">Instellingen</h1><br />
+					<?php
+					include("connect.php");
+					$username = base64_encode($_SESSION["username"]);
+					$selectscores = mysqli_query($connect, "SELECT xp, points FROM users WHERE username='$username';") or die ("Opvragen score it database mislukt!");
+					while($row = mysqli_fetch_assoc($selectscores)) {
+						$xp = $row["xp"];
+						$points = $row["points"];
+						echo "<p>Je hebt $xp xp.</p>";
+						echo "<p>Je laatste op de test is $points punten.</p>";
+					}
+					?>
+					<h3 class="pt-5">Wachtwoord wijzigen</h3>
 					<form action="" method="post">
 						<table>
 							<tr><td>Oud wachtwoord</td><td><input type="password" name="oldpwd" maxlength="256"/></td></tr>
 							<tr><td>Nieuw wachtwoord</td><td><input type="password" name="newpwd" maxlength="256"/></td></tr>
 							<tr><td>Bevestig wachtwoord</td><td><input type="password" name="checkpwd" maxlength="256"/></td></tr>
-							<tr><td><input type="submit" class="btn btn-CTA-2 pt-5" name="changepwd" value="Wachtwoord wijzigen" /></td><td></td></tr>
+							<tr><td><input type="submit" class="btn btn-CTA-2" name="changepwd" value="Wachtwoord wijzigen" /></td><td></td></tr>
 						</table>
 					</form><br />
 				</div>
@@ -72,7 +82,7 @@ if (isset($_POST["changepwd"])) {
 						echo "<div class'container'>
 									<div class='row'>
 										<div class='col-sm-12 text-center'>
-											<p>Het nieuwe wachtwoord mag niet hetzelfde zijn als het oude!</p>
+											<p class='error-text'>Het nieuwe wachtwoord mag niet hetzelfde zijn als het oude!</p>
 										</div>
 									</div>
 								</div>					
@@ -93,7 +103,7 @@ if (isset($_POST["changepwd"])) {
 					echo "<div class'container'>
 					<div class='row'>
 						<div class='col-sm-12 text-center'>
-							<p>Het oude wachtwoord is niet correct!</p>
+							<p class='error-text'>Het oude wachtwoord is niet correct!</p>
 						</div>
 					</div>
 				</div>";
@@ -104,7 +114,7 @@ if (isset($_POST["changepwd"])) {
 				echo "<div class'container'>
 				<div class='row'>
 					<div class='col-sm-12 text-center'>
-						<p>Het wachtwoord moet minimaal 12 tekens lang zijn!</p>
+						<p class='error-text'>Het wachtwoord moet minimaal 12 tekens lang zijn!</p>
 					</div>
 				</div>
 			</div>";
@@ -114,7 +124,7 @@ if (isset($_POST["changepwd"])) {
 			echo "<div class'container'>
 			<div class='row'>
 				<div class='col-sm-12 text-center'>
-					<p>De nieuwe wachtwoorden komen niet overeen!</p>
+					<p class='error-text'>De nieuwe wachtwoorden komen niet overeen!</p>
 				</div>
 			</div>
 		</div>";
@@ -124,7 +134,7 @@ if (isset($_POST["changepwd"])) {
 		echo "<div class'container'>
 		<div class='row'>
 			<div class='col-sm-12 text-center'>
-				<p>Je hebt niet alle velden ingevuld!</p>
+				<p class='error-text'>Je hebt niet alle velden ingevuld!</p>
 			</div>
 		</div>
 	</div>";

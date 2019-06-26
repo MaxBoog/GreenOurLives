@@ -50,16 +50,11 @@ if (!isset($_SESSION["login"])) {
 		include("nav.php");
 		?>
 	</header>
-	<section class="container">
-	<div class="row">
-			<?php if ($_SESSION["login"] == true) {
-				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
-			}?>
-		</div>
+	<section class="container cont">
 		<div class="row">
 			<h1 class="header-text mx-auto">Meer informatie</h1>
 			<div class="col-sm-12">
-				<p class="header-subtext">Hoe zit het nou precies met de ecologische voetafdruk? Vindt het hier uit!</p>
+				<p class="header-subtext text-center">Hoe zit het nou precies met de ecologische voetafdruk? Vindt het hier uit!</p>
 				<p>De Aarde produceert alles wat we nodig hebben om ons in onze voedsel-, energie- en andere levensbehoeften te voorzien. 
 				Voor de productie en afvalverwerking hiervan is ruimte nodig. 
 				De ecologische voetafdruk geeft inzicht in de hoeveelheid land (mondiale hectares) die jaarlijks nodig is voor onze consumptie. 
@@ -92,7 +87,8 @@ if (!isset($_SESSION["login"])) {
 				<p>Als alle bruikbare ruimte op Aarde verdeeld wordt over alle mensen en de natuur voldoende ruimte krijgt om zichzelf te herstellen, dan zou elke bewoner gemiddeld recht hebben op zo’n 1,8 hectare per persoon. 
 				Het Living Planet Report van 2010 geeft de volgende cijfers (die betrekking hebben op 2007) voor de gemiddelde voetafdruk per inwoner per continent en per land. 
 				Hier zijn enkele cijfers om een idee te geven hoe de ecologische voetafdruk verdeeld is over de wereld:</p>
-				<p>Wil je er zelf iets aan doen? <a href="challenges.php">Bekijk dan eens de challenges!</a></p>
+				<p>Wil je er zelf iets aan doen?</p>
+				<p> <a class="btn btn-CTA-2" href="challenges.php">Bekijk dan eens de challenges! <i class="fas fa-chevron-right"></i></a></p>
 			</div>
 			</div>
 		</div>

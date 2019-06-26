@@ -60,18 +60,18 @@ error_reporting(E_ALL & ~E_NOTICE);
 		<div class="row">
 			<h2 class="header-text mx-auto">Test</h2>
 			<div class="col-sm-12 text-center">
-				<p class="header-subtext">Bereken hier je ecologische voetafdruk</p>
+				<p class="header-subtext">Bereken hier jouw ecologische voetafdruk</p>
 			</div>
 		</div>
 	</section>
 <?php
 function ShowTest() {
-	echo '<div class="container">
+	echo '<div class="container cont">
 		<div class="row">
-			<div class="col-sm-10 offset-sm-2">
+			<div class="col-md-10 offset-md-2">
 				<form action="" method="post">
 					
-						<table id="test">			
+						<table id="test" class="table table-responsive">			
 							<tr><th></th><th><p class="question">1. Met welk vervoersmiddel gaat u naar school/werk?</p></th></tr>
 							<tr><td><input type="radio" name="q1" value="1" class="question"/></td><td>Lopen of fiets</td></tr>
 							<tr><td><input type="radio" name="q1" value="2" /></td><td>Openbaar vervoer</td></tr>
@@ -209,8 +209,8 @@ if (isset($_POST["submit"])) {
 		echo '<div class="container mx-auto">
 					<div class="row">
 						<div class="col-sm-8 offset-2">
-							<h2 id="testresult" class="mx-auto points">Je hebt <b>'.$points.'</b> van de <b>55</b> punten gescoord! </h2> </br>
-							<p>Wil je de volgende keer meer punten halen? <a href="about.php#tips">Tips om groener te leven</a></p> </br>
+							<h2 id="testresult" class="mx-auto points">U heeft <b>'.$points.'</b> van de <b>55</b> punten gescoord! </h2> </br>
+							<p>Wilt u de volgende keer meer punten halen? <a href="challenges.php">Tips om groener te leven <i class="fas fa-chevron-right"></i></a></p> </br>
 							
 						</div>
 			<style>
@@ -239,7 +239,7 @@ if (isset($_POST["submit"])) {
 	}
 	else {
 		echo "<div class='container text-center'>
-				<h1 class='pb-5 error-message'>Je hebt niet alle vragen ingevuld!</h1>
+				<h1 class='pb-5 error-message'>U heeft niet alle vragen ingevuld!</h1>
 				</div>";
 	}
 }

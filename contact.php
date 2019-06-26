@@ -50,12 +50,7 @@ if (!isset($_SESSION["login"])) {
 		include("nav.php");
 		?>
 	</header>
-	<section class="container-fluid">
-	<div class="row">
-			<?php if ($_SESSION["login"] == true) {
-				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
-			}?>
-		</div>
+	<section class="container cont">
 		<div class="row">
 			<h1 class="header-text mx-auto">Contact</h1>
 			<div class="col-sm-12 text-center">
@@ -81,7 +76,7 @@ if (isset($_POST["contact"])) {
 			echo "<div class'container'>
 			<div class='row'>
 				<div class='col-sm-12 text-center'>
-					<p>Dit e-mailadres is ongeldig! <a href='contact.php'>Terug <i class='fas fa-arrow-right'></i></a></p>
+					<p class='error-text'>Dit e-mailadres is ongeldig! <a href='contact.php'>Terug <i class='fas fa-arrow-right'></i></a></p>
 				</div>
 			</div>
 		</div>";
@@ -91,25 +86,25 @@ if (isset($_POST["contact"])) {
 		echo "<div class'container'>
 		<div class='row'>
 			<div class='col-sm-12 text-center'>
-			<p>Je hebt niet alle velden ingevuld! <a href='contact.php'>Terug <i class='fas fa-arrow-right'></i></a></p>;
+			<p class='error-text'>Je hebt niet alle velden ingevuld! <a href='contact.php'>Terug <i class='fas fa-arrow-right'></i></a></p>;
 			</div>
 		</div>
 	</div>";
 	}
 }
 else {
-	echo '<p class="header-subtext">Vul het onderstaande contactformulier in:</p>
+	echo '<p class="header-subtext pb-5">Vul het onderstaande contactformulier in:</p>
 			<form action="" method="post">
 				<input type="text" name="name" placeholder="Naam" maxlength="64" autofocus /><br />
 				<input type="text" name="email" placeholder="Emailadres" maxlength="64" /><br />
-				<select name="subject">
+				<select name="subject" class="p-3 m-4">
 					<option value="vraag" selected>Vraag</option>
 					<option value="opmerking">Opmerking</option>
 					<option value="klacht">Klacht</option>
 					<option value="overig">Overig</option>
 				</select><br />
 				<textarea name="message" placeholder="Bericht"></textarea><br />
-				<input type="submit" class="btn btn-CTA-2" name="contact" value="Bericht versturen" /><br />
+				<input type="submit" class="btn btn-CTA-2 mt-3" name="contact" value="Bericht versturen" /><br />
 			</form>';
 }
 ?>

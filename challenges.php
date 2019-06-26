@@ -50,17 +50,12 @@ if (!isset($_SESSION["login"])) {
 		include("nav.php");
 		?>
 	</header>
-	<section class="container-fluid">
-	<div class="row">
-			<?php if ($_SESSION["login"] == true) {
-				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';
-			}?>
-		</div>
+	<section class="container cont">
 		<div class="row">
 			<h1 class="header-text mx-auto">Challenges</h1>
-			<div class="col-sm-12 text-center">
-				<p class="header-subtext">Wat kun je zelf doen? Probeer om de onerstaande challanges te voltooien!</p>
-				<ul>
+			<div class="col-sm-12">
+				<p class="header-subtext text-center">Wat kun je zelf doen? Probeer om de onderstaande challanges te voltooien!</p>
+				<ol class="challenge-list">
 					<li>Eet komende week maximaal maar één keer vlees.</li>
 					<li>Eet komende week twee vleesvervangers.</li>
 					<li>Ga komende week twee keer met OV naar werk.</li>
@@ -84,7 +79,7 @@ if (!isset($_SESSION["login"])) {
 					<li>Lees goed de etiketten in de supermarkt: zo weet u waar de producten vandaan komen; koop eten dat uit Europa komt.</li>
 					<li>Kies voor vis die op duurzame wijze is gevangen en indien mogelijk voor vis met het MSC-keurmerk. </li>
 					<li>Kies voor herlaadbare batterijen en recycleer die wanneer ze niet meer bruikbaar zijn.</li>
-				</ul>
+				</ol>
 
 			</div>
 		</div>

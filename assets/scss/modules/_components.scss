@@ -1,27 +1,6 @@
-// styles for marketing icons
-
-.short-icon {
-	margin: 2.5rem 0;
-	color: $purple;
-}
-
-.tours-heading {
-	font-size: $f-bigger;
-	color: $dark-grey;
-}
-
-.card {
-	margin-bottom: 5rem;
-	.card-link {
-		color: $tertiary-color;
-		border: 2px solid $tertiary-color;
-		padding: 1rem;
-		border-radius: 7px;
-		transition: 0.1s;
-		&:hover {
-			background-color: $tertiary-color;
-			color: $white;
-		}
+.challenge-list {
+	li {
+		padding: 1rem 0 !important;
 	}
 }
 

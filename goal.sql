@@ -31,7 +31,7 @@ CREATE TABLE `users` (
   `points` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 INSERT INTO `users` (`id`, `email`, `username`, `password`, `xp`, `points`) VALUES
-(1, 'YUBhLm5s', 'YQ==', 'bb1437424669724c39d0db468951fd85', 0, 0),
+(1, 'YUBhLm5s', 'YQ==', 'bb1437424669724c39d0db468951fd85', 275, 34),
 (2, 'YkBiLm5s', 'Yg==', '6d399b1cb20db5ccc79ab9271d0fd19c', 0, 0),
 (3, 'Y0BjLm5s', 'Yw==', '088ebf098f997f40032d09ccc3598551', 0, 0),
 (4, 'ZEBkLm5s', 'ZA==', '8c87219e64a88579d68489583b1bb538', 0, 0),

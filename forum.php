@@ -3,6 +3,12 @@ session_start();
 if (!isset($_SESSION["login"])) {
 	$_SESSION["login"] = false;
 }
+if (!isset($_SESSION["reload"])) {
+	$_SESSION["reload"] = false;
+}
+if ($_SESSION["reload"] == true) {
+	echo '<script>window.location.href="reload.php";</script>';
+}
 ?>
 <!DOCTYPE html>
 <html lang="nl-NL">
@@ -50,50 +56,56 @@ if (!isset($_SESSION["login"])) {
 		include("nav.php");
 		?>
 	</header>
-	<section class="container">
-		<div class="row">
-			<h1 class="header-text mx-auto">Over Ons & Het Project</h1>
-			<div class="col-sm-12">
-				<p class="header-subtext text-center">Lees hier meer over wie wij zijn en wat wij doen.</p>
-
-			</div>
-		</div>
-	</section>
 	<section class="container cont">
 		<div class="row">
+			<h1 class="header-text mx-auto">Forum</h1>
 			<div class="col-sm-12">
-
-				<p>Green Our Lives is geboren uit een project die wij, Max Boog, Jesse Borghardt, Govert Hagelaar, Martijn Jansen, Jorrit Lenssinck, Jenny Lin en William de Rooij, uit moesten voeren voor het Informatiekunde introductieproject van de bachelor Informatiekunde aan de Universiteit Utrecht. 
-				Gezamenlijk zijn wij aan de gang gegaan met dit project, waarbij wij in een periode van ongeveer twee maanden een geheel werkend systeem moeten ontwikkelen, waarbij we de gedachte “designing for social goods” in ons achterhoofd moeten houden. 
-				Dit houdt in het kort in dat wij een systeem moeten ontwikkelen dat ervoor gaat zorgen dat sociale verandering bevordert gaat worden, zodat uitdagingen van vandaag de dag aangepakt kunnen worden en mensen in de toekomst hun leven zinvol kunnen verbeteren.</p>
-
-				<hr>
-			</div>
-			<div class="col-lg-6">
-				<img src="assets/img/park.svg" class="img-fluid" alt="Green Our Lives">
-			</div>
-			<div class="col-lg-6">
-			
-				<p>In de huidige maatschappij wordt het milieu steeds belangrijker. De druk om ons aan te passen op een zodanige manier dat de aarde minder beschadigd raakt, loopt op. Daarom is ervoor gekozen om met dit project te gaan richten op een onderwerp dat met het milieu te maken heeft. 
-				Het gewenste effect is hierdoor een steentje bij te kunnen dragen aan een betere toekomst. Hiermee zal het project ook voornamelijk vallen onder het social-impact domain environment. 
-				Met dit uitgangspunt zijn we uiteindelijk op het idee gekomen om een website te creëren waarmee de gebruiker zijn of haar ecologische voetafdruk kan meten door middel van een test. </p>
-				
-			</div>
-			<div class="col-sm-12">
-			<p>
-				Het doel wat we hiermee willen bereiken is dat mensen ten eerste bewuster worden van hun ecologische voetafdruk en ten tweede dat de levenswijze van mensen verandert zodat hun ecologische voetafdruk verkleind wordt.</p>
-				<p>Uiteindelijk hebben wij met elkaar de huidige website ontwikkeld die op dit moment door jou gebruikt wordt en kunnen wij met trots zeggen dat ons introductieproject van onze studie met succes afgerond is! </p>
-				<a class="btn btn-CTA-2" href="information.php">Meer informatie over de ecologische voetafdruk <i class="fas fa-chevron-right"></i></a>
-			</div>
-
+				<p class="header-subtext text-center">Praat met anderen over een groener bestaan.</p>
+				<div id="forum">
+				<?php
+				include("connect.php");
+				$select = mysqli_query($connect, "SELECT message, postedby, date, time FROM forum ORDER BY postedby;") or die ("Ophalen berichten uit database mislukt!");
+				while ($row = mysqli_fetch_assoc($select)) {
+					 $message = nl2br($row["message"]);
+					 $postedby = $row["postedby"];
+					 $date = $row["date"];
+					 $time = $row["time"];
+					 echo "$postedby op $date om $time:<br />$message<hr />";
+				}
+				mysqli_close($connect);
+				if ($_SESSION["login"] == true) {
+					if (isset($_SESSION["username"])) {
+						echo '<form action="" method="post">
+							<textarea name="msg" maxlength="10000"></textarea>
+							<input type="submit" class="btn btn-CTA-2" name="sendmsg" value="Post!" />
+						<form>';
+					}
+				}
+				if (isset($_POST["sendmsg"])) {
+					$msg = strip_tags(nl2br($_POST["msg"]));
+					if (!empty($msg)) {
+						include("connect.php");
+						$msg = mysqli_real_escape_string($connect, $msg);
+						$postedby = $_SESSION["username"];
+						$date = date("d-m-Y");
+						$time = date("H:i:s");
+						mysqli_query($connect, "INSERT INTO forum VALUES('', '$msg', '$postedby', '$date', '$time');") or die ("Bericht versturen mislukt!");
+						mysqli_close($connect);
+						$_SESSION["reload"] = true;
+						echo '<script>window.location.href="reload.php";</script>';
+					}
+					else {
+						echo "<p class='error-text'>Je hebt geen bericht geschreven!</p>";
+					}
+				}
+				?>
+				</div>
 			</div>
 		</div>
 	</section>
 	<main role="main">
 		<!-- footer -->
-		<?php
-			include("footer.php")
-		?>
+		<?php include("footer.php"); ?>
 	</main>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"

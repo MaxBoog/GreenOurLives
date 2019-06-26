@@ -54,7 +54,7 @@ if ($_SESSION["login"] == true) {
 		include("nav.php");
 		?>
 	</header>	
-		<section class="container-fluid">
+		<section class="container">
 		<div class="row">
 			<?php if ($_SESSION["login"] == true) {
 				echo '<p class="mx-auto mt-5">Welkom ' . $_SESSION["username"] . '</p>';}?>
@@ -63,7 +63,7 @@ if ($_SESSION["login"] == true) {
 				<h1 class="header-text mx-auto">Inloggen</h1>
 			</div>
 		</section>
-		<div class="container">
+		<div class="container cont">
 			<div class="row">
 				<div class="col-sm-8 offset-sm-2">
 					<form action="" method="post">
@@ -73,7 +73,7 @@ if ($_SESSION["login"] == true) {
 						<div class="form-group">
 							<input type="password" class="form-control mb-5" name="password" placeholder="Wachtwoord..." />
 						</div>
-						<input type="submit" name="login" value="Log in" class="btn btn-CTA-2 pr-3" />
+						<input type="submit" name="login" value="Log in" class="btn btn-CTA-2 mr-3" /> 
 						<a class="btn btn-CTA-3 pr-3" href="register.php" >Of maak een account aan</a>
 						<a class="btn btn-CTA-3 mt-5 mt-lg-0" href="lostpassword.php" >Wachtwoord vergeten?</a>
 					</form>
@@ -103,7 +103,7 @@ if (isset($_POST["login"])) {
 			echo "<div class'container'>
 			<div class='row'>
 				<div class='col-sm-12 text-center'>
-					<p>Gebruikersnaam en wachtwoord komen niet overeen!</p>
+					<p class='error-text'>Gebruikersnaam en wachtwoord komen niet overeen!</p>
 				</div>
 			</div>
 		</div>";
@@ -114,7 +114,7 @@ if (isset($_POST["login"])) {
 		echo "<div class'container'>
 		<div class='row'>
 			<div class='col-sm-12 text-center'>
-				<p>Je hebt niet alle velden ingevuld!</p>
+				<p class='error-text'>Je hebt niet alle velden ingevuld!</p>
 			</div>
 		</div>
 	</div>";

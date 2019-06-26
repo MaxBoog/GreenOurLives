@@ -11,22 +11,19 @@
 						<a href="index.php">Home</a>
 					</p>
 					<p>
-						<a href="test.php">Doe de test!</a>
+						<a href="test.php">Doe De Test</a>
 					</p>
 					<p>
-						<a href="about.php">Over ons</a>
+						<a href="about.php">Over Ons</a>
 					</p>
 					<p>
-						<a href="contact.php">Contact</a>
+						<a href="information.php">De Ecologische Voetadruk</a>
 					</p>
 					<p>
-						<a href="search.php">Search</a>
+						<a href="challenges.php">Challenges</a>
 					</p>
 					<p>
-						<a href="login.php">Inloggen</a>
-					</p>
-					<p>
-						<a href="register.php">Account aanmaken</a>
+						<a href="forum.php">Forum</a>
 					</p>
 				</div>
 				<div class="col-md-6 text-center text-md-left">

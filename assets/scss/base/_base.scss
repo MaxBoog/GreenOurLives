@@ -9,6 +9,7 @@ body {
 	font-weight: 300 !important;
 	line-height: 3.4rem;
 	color: $black;
+	background-color: #fafafa;
 }
 p {
 	font-size: $f-normal;
@@ -45,4 +46,11 @@ a {
 
 li {
 	font-size: $f-normal;
+}
+
+.cont {
+	background-color: white;
+	border-radius: 1rem;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }

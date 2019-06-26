@@ -1,2 +1,1 @@
-<?php $connect = mysqli_connect("localhost", "root", "Jorrit-07-04-2000", "goal") or die ("Verbinding met de database mislukt!");
-//$connect = mysqli_connect("db.delbellowebdesign.nl", "md425557db477014", "Greenourlives1", "md425557db477014") or die ("Verbinding met de database mislukt!"); ?>
+<?php $connect = mysqli_connect("db.delbellowebdesign.nl", "md425557db477014", "Greenourlives1", "md425557db477014") or die ("Verbinding met de database mislukt!"); ?>

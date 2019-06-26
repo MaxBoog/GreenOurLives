@@ -38,7 +38,7 @@ if (!isset($_SESSION["login"])) {
 		setTimeout(function () {
 			document.querySelector("html").classList.remove("spinner-3");
 			document.querySelector("body").style.display = "block";
-		}, 1000);
+		}, 1400);
 	</script>
 	<!-- body -->
 	<button class="btn scrollToTop">
@@ -64,7 +64,7 @@ if (!isset($_SESSION["login"])) {
 		</div>
 	</section>
 		
-	<section class="container pt-5" id="down">
+	<section class="container pt-5 cont" id="down">
 		<div class="row">
 			<div class="col-sm-6">
 				<h1 class="pb-5"><strong>Wat is een ecologische voetafdruk?</strong></h1>

@@ -41,12 +41,18 @@ function CurrentPage($page) {
 							<a class="nav-link pr-md-4 " href="contact.php">Contact  <i class="fas fa-envelope"></i></a>
 						</li>
 						<li class="nav-item">
+							<a class="nav-link pr-md-4 " href="challenges.php">Challenges <i class="fas fa-trophy"></i></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link pr-md-4 " href="forum.php">Forum <i class="fas fa-comments"></i></a>
+						</li>
+						<li class="nav-item">
 							<a class="nav-link pr-md-4 " href="search.php">Zoeken  <i class="fas fa-search"></i></a>
 						</li>
 						<?php
 						if ($_SESSION["login"] != true) {
 							echo '<li class="nav-item">
-									  <a class="nav-link pr-md-4" href="login.php">Inloggen <i class="fas fa-sign-in-alt"></i></a></li>
+									  <a class="nav-link pr-md-4" href="login.php">Log in <i class="fas fa-sign-in-alt"></i></a></li>
 								  <li class="nav-item">
 									  <a class="nav-link pr-md-4" href="register.php">Account aanmaken <i class="fas fa-user-plus"></i></a>
 								  </li>';
